@@ -1,0 +1,201 @@
+
+________________________________________
+SPACEMINE: TÀI LIỆU TỔNG HỢP 
+Phiên bản: 3.0 (Final for MVP) | Ngày cập nhật: 20/10/2025
+________________________________________
+MỤC LỤC
+
+1.	Tổng quan Game
+2.	Hệ thống Tài khoản & Onboarding
+3.	Hệ sinh thái Kinh tế & Vòng lặp Gameplay
+4.	Hệ thống NFT & Chế tạo
+5.	Hệ thống Thanh toán & E Token
+6.	Hệ thống PvP, Rủi ro & Hủy diệt
+7.	Hệ thống Guild & Lãnh thổ
+8.	Kiến trúc Kỹ thuật
+9.	Hạ tầng Máy chủ & Chi phí
+10.	Lộ trình Phát triển & Pháp lý
+________________________________________
+1. TỔNG QUAN GAME
+
+
+1.1. Concept Cốt lõi
+
+SpaceMine là game metaverse khai thác không gian 2D với nền kinh tế hardcore do người chơi điều khiển1. Người chơi sẽ khám phá 9 hành tinh trong Hệ Mặt Trời, khai thác tài nguyên, chế tạo phi thuyền và trang bị NFT độc nhất, tham gia vào các cuộc chiến PvP khốc liệt để tranh giành tài nguyên và xây dựng đế chế kinh tế của riêng mình2.
+
+
+1.2. Điểm Bán hàng Độc nhất (USP)
+
+●	Kinh tế Bền vững: Nền kinh tế được xây dựng dựa trên nguyên tắc "Sản xuất & Hủy diệt", nơi mọi vật phẩm NFT được tạo ra đều có mục đích tiêu thụ thông qua các hoạt động rủi ro cao, đảm bảo giá trị lâu dài.
+●	Sở hữu Tài sản Thực sự: Người chơi thực sự sở hữu các vật phẩm NFT của mình và có toàn quyền giao dịch chúng trên các chợ của bên thứ ba như OpenSea.
+●	PvP có Rủi ro Kinh tế: Thua trong PvP có thể dẫn đến việc mất mát vĩnh viễn phi thuyền và trang bị3, khiến mỗi trận chiến đều mang ý nghĩa chiến lược sâu sắc.
+
+●	Tập trung vào Người dùng Crypto: Game được thiết kế với các cơ chế dành cho người chơi đã am hiểu về blockchain, tạo ra một sân chơi có chiều sâu và công bằng.
+
+1.3. Đối tượng Người chơi
+
+●	Giai đoạn MVP: Nam, 18-40 tuổi, đã có kinh nghiệm với game blockchain, sở hữu ví crypto, và quan tâm đến các game có nền kinh tế phức tạp.
+●	Giai đoạn Beta trở đi: Mở rộng ra đối tượng người chơi phổ thông, yêu thích thể loại game không gian, chế tạo và giao dịch.
+________________________________________
+2. HỆ THỐNG TÀI KHOẢN & ONBOARDING
+
+
+2.1. Mở cho Tất cả Người chơi từ MVP
+
+Game sẽ cho phép tất cả mọi người đăng ký tài khoản bằng Email/Password truyền thống để có thể trải nghiệm miễn phí, nhằm mở rộng phễu người dùng tối đa ngay từ đầu.
+
+2.2. Trải nghiệm "Locked NFT"
+
+●	Người chơi phổ thông (không kết nối ví) có thể tham gia các hoạt động cơ bản như khai thác, chế tạo.
+●	Khi họ chế tạo hoặc nhận được một vật phẩm đáng lẽ là NFT, vật phẩm đó sẽ xuất hiện trong kho đồ với trạng thái "Bị khóa" (Locked).
+●	Hệ thống sẽ thông báo rõ: "Bạn đã nhận được một vật phẩm NFT giá trị. Hãy kết nối ví điện tử để thực sự sở hữu và mở khóa khả năng giao dịch."
+●	Giải pháp kỹ thuật: Hệ thống sẽ tự động mint NFT này và lưu vào một "Ví Kho" (Custodial Wallet) của game, đồng thời ghi nhận quyền sở hữu của người chơi trong database.
+
+2.3. Trao quyền khi Kết nối Ví
+
+●	Khi người chơi kết nối thành công một ví điện tử, game sẽ cho phép họ "Rút" (Withdraw) toàn bộ các NFT "Bị khóa" về ví cá nhân của mình.
+●	Từ thời điểm đó, họ có toàn quyền tự do giao dịch tài sản trên các nền tảng thứ 3 và trở thành "Người chơi Blockchain" thực thụ.
+________________________________________
+3. HỆ SINH THÁI KINH TẾ & VÒNG LẶP GAMEPLAY
+
+
+3.1. Triết lý Kinh tế: "Sản xuất & Hủy diệt"
+
+Nền kinh tế được thiết kế để tự cân bằng. "Cung" (khai thác, chế tạo) luôn phải đi đôi với "Cầu". Cầu trong SpaceMine được tạo ra từ sự tiêu thụ và mất mát có ý nghĩa.
+
+3.2.
+Kinh tế 4 Tầng 4
+
+●	Tầng 1 - Miner (80% người chơi): Khai thác khoáng sản thô5.
+
+●	Tầng 2 - Refiner (15% người chơi): Tinh chế khoáng sản thành nguyên liệu cao cấp6.
+
+●	Tầng 3 - Crafter (4% người chơi): Chế tạo phi thuyền, vũ khí, trang bị (NFT)7.
+
+●	Tầng 4 - Trader/PvP Player (1% người chơi): Mua bán và sử dụng các sản phẩm cuối cùng8.
+
+
+3.3. Ba Vòng lặp Kinh tế Gắn kết
+
+1.	Vòng lặp Cốt lõi (Sản xuất ↔ Hủy diệt): PvP rủi ro cao dẫn đến việc phi thuyền và trang bị NFT bị phá hủy, tạo ra nhu cầu liên tục cho các Crafter phải sản xuất vật phẩm mới, và Miner phải cung cấp nguyên liệu.
+2.	Vòng lặp Lãnh thổ (Chinh phục ↔ Duy trì): Các Guild chiến đấu để chiếm các hành tinh. Cuộc chiến đốt một lượng tài sản khổng lồ. Việc duy trì lãnh thổ cũng đòi hỏi chi phí hàng tuần bằng tài nguyên và E Token 9999, tạo ra một "sink" lớn.
+
+3.	Vòng lặp Tối ưu hóa (Cá nhân & Tiêu hao): Người chơi sẽ chế tạo và sử dụng các vật phẩm tiêu hao (consumables) như thuốc buff, pin năng lượng... để tối ưu hóa hiệu suất, tạo ra một thị trường có nhu cầu liên tục.
+________________________________________
+4. HỆ THỐNG NFT & CHẾ TẠO
+
+
+4.1. Tỷ lệ Chế tạo & Độ hiếm (Đã cập nhật)
+
+Tỷ lệ chế tạo ra NFT cao cấp được thiết kế rất thấp để đảm bảo giá trị và sự khan hiếm:
+●	94% → Normal (Không NFT)
+●	5% → Rare NFT (+15% chỉ số)
+●	0.8% → Epic NFT (+40% chỉ số)
+●	0.1% → Legendary NFT (+100% chỉ số, hiệu ứng đặc biệt)
+
+4.2. Cơ chế Hao mòn & Phục hồi
+
+●	Tất cả các NFT trang bị đều có độ bền và sẽ bị hao mòn khi sử dụng.
+●	Khi độ bền tối đa giảm về 0, vật phẩm sẽ rơi vào trạng thái "Hỏng nặng" (Broken) – không thể sử dụng nhưng vẫn tồn tại trong ví.
+●	Để sửa chữa, người chơi cần một vật phẩm phục hồi cực hiếm, tạo ra một "sink" hiệu quả cho các NFT cao cấp.
+________________________________________
+5. HỆ THỐNG THANH TOÁN & E TOKEN
+
+
+5.1. E Token
+
+●	Là đơn vị tiền tệ ảo trong game, dùng để mua bán, giao dịch, trả phí 10.
+
+●	QUAN TRỌNG: E Token KHÔNG phải là cryptocurrency và KHÔNG thể rút ra tiền thật để đảm bảo tuân thủ pháp lý 11.
+
+
+5.2. Giai đoạn MVP: Nạp tiền bằng Stablecoin
+
+●	Phương thức duy nhất: Nạp tiền thông qua Hệ thống Ví Nạp Tiền Động được xây dựng ngay từ đầu.
+●	Quy trình:
+1.	Hệ thống quản lý một Ví Chủ (Master Wallet).
+2.	Mỗi người chơi khi muốn nạp tiền sẽ được cấp một địa chỉ ví nạp tiền riêng, duy nhất.
+3.	Người chơi sẽ gửi Stablecoin (USDT, USDC trên mạng Polygon) vào địa chỉ được cấp.
+4.	Backend tự động quét blockchain, xác nhận giao dịch và cộng E Token vào tài khoản người chơi.
+
+5.3. Giai đoạn Beta trở đi: Tích hợp Stripe
+
+●	Khi game đã có doanh thu ổn định và công ty được thành lập, sẽ tích hợp cổng thanh toán Stripe để chấp nhận thanh toán bằng thẻ tín dụng/ghi nợ toàn cầu, phục vụ cho luồng người chơi phổ thông.
+________________________________________
+6. HỆ THỐNG PVP, RỦI RO & HỦY DIỆT
+
+
+6.1. Công thức chiến đấu
+
+●	Sát thương: Damage = max(ATK - DEF, 0)12.
+
+●	Mất hàng hóa: Cargo Loss = (Damage / ATK) x 50%13.
+
+
+6.2. Rủi ro Mất mát Vĩnh viễn
+
+●	Khi một phi thuyền bị phá hủy trong khu vực PvP, nó sẽ bị phá hủy vĩnh viễn.
+●	Toàn bộ hàng hóa trong khoang sẽ rơi ra ngoài.
+●	Các trang bị NFT có tỷ lệ bị phá hủy vĩnh viễn hoặc rơi ra dưới dạng chiến lợi phẩm.
+________________________________________
+7. HỆ THỐNG GUILD & LÃNH THỔ
+
+●	Người chơi có thể thành lập Guild, chia sẻ tài nguyên và宣战14141414.
+
+●	Các Guild có thể chiếm các hành tinh như Sao Hỏa, Sao Mộc... để nhận lợi ích kinh tế như tăng tốc độ đào hoặc đánh thuế giao dịch 15.
+
+●	Việc duy trì lãnh thổ đòi hỏi chi phí hàng tuần, tạo ra một động lực kinh tế và mục tiêu endgame cho các tập thể 16161616.
+
+________________________________________
+8. KIẾN TRÚC KỸ THUẬT
+
+●	Game Engine: Godot Engine.
+●	Backend: Spring Boot (Java) chạy trên kiến trúc Microservices17.
+
+●	Database: MongoDB18.
+
+●	Cache: Redis19.
+
+●	Blockchain: Polygon (MATIC).
+●	Website: Xây dựng cho mục đích Marketing, SEO, và là cổng thông tin.
+________________________________________
+9. HẠ TẦNG MÁY CHỦ & CHI PHÍ
+
+
+9.1. Giai đoạn MVP (Hỗ trợ 1,000 CCU)
+
+●	Cấu trúc: 1 Server All-in-One.
+●	Server đề xuất: 1 x Contabo Cloud VPS 20 (6 Cores, 12 GB RAM, 100 GB NVMe).
+●	Chi phí ước tính: ~€7.00 / tháng (~190,000 VND).
+
+9.2. Giai đoạn Chính thức (Hỗ trợ 5,000 CCU)
+
+●	Cấu trúc: Kiến trúc 3 lớp.
+●	Hệ thống Server đề xuất:
+○	1 x Load Balancer (Contabo VPS 10).
+○	3 x Game/Service Servers (Contabo VPS 20).
+○	1 x Dedicated Database Server (Ryzen 12 Cores, 128GB RAM).
+●	Chi phí ước tính: ~€139.00 / tháng (~3,750,000 VND).
+
+9.3. Giai đoạn Mở rộng (10,000 - 20,000 CCU)
+
+●	Cấu trúc: Kiến trúc Microservices Phân tán.
+●	Hệ thống Server đề xuất:
+○	2+ Load Balancers (HA).
+○	Cụm Dedicated Servers cho Game logic (ví dụ: 2 x Turin 32 Cores).
+○	Cụm Dedicated Servers cho Database (ví dụ: 2 x Genoa 24 Cores chạy Replica Set).
+●	Chi phí ước tính: €500 - €1,000+ / tháng tùy thuộc vào quy mô và cấu hình cụ thể.
+________________________________________
+10. LỘ TRÌNH PHÁT TRIỂN & PHÁP LÝ
+
+
+10.1. Lộ trình 3 Giai đoạn
+
+1.	MVP (0-9 tháng): Ra mắt phiên bản tối giản, mở cho mọi người chơi nhưng chỉ có hình thức nạp tiền bằng crypto. Mục tiêu: Xây dựng cộng đồng cốt lõi và chứng minh tiềm năng doanh thu.
+2.	Beta (9-15 tháng): Khi MVP có lãi, tiến hành thành lập công ty tại Singapore. Ra mắt bản Beta, tích hợp Stripe, và bắt đầu các chiến dịch marketing cho người chơi phổ thông.
+3.	Ra mắt Chính thức: Mở rộng quy mô server, đẩy mạnh marketing toàn cầu, giới thiệu các tính năng endgame như Territory War.
+
+10.2. Chiến lược Pháp lý
+
+●	Giai đoạn đầu: Hoạt động với tư cách cá nhân, doanh thu nhận bằng crypto.
+●	Giai đoạn chính thức: Thành lập công ty Pte. Ltd. tại Singapore. Cấu trúc này mang lại sự bảo vệ trách nhiệm hữu hạn, tối ưu về thuế, và tạo sự tin cậy để làm việc với các đối tác toàn cầu. Tài khoản Stripe và các hoạt động kinh doanh chính thức sẽ được thực hiện thông qua pháp nhân Singapore.

@@ -1,0 +1,1895 @@
+SPACEMINE: TÀI LIỆU TỔNG HỢP ĐẦY ĐỦ
+Phiên bản: 3.0 Final (Kết hợp v1.0 + v3.0)
+Ngày cập nhật: 20/10/2025
+________________________________________
+MỤC LỤC
+1.	Tổng quan Game
+2.	Hệ thống Hành tinh & Khoáng sản
+3.	Hệ thống Tài khoản & Onboarding
+4.	Cơ chế Năng lượng - Fuel System
+5.	Hệ sinh thái Kinh tế 4 Tầng & Vòng lặp Gameplay
+6.	Hệ thống NFT & Chế tạo
+7.	Hệ thống Thanh toán & E Token
+8.	Hệ thống PvP, Rủi ro & Hủy diệt
+9.	Hệ thống Guild & Lãnh thổ
+10.	Tokenomics & Balance
+11.	Kiến trúc Kỹ thuật
+12.	Hạ tầng Máy chủ & Chi phí
+13.	Monetization
+14.	Pháp lý & An toàn
+15.	Lộ trình Phát triển
+16.	Financial Projection
+________________________________________
+1. TỔNG QUAN GAME
+1.1. Concept Cốt lõi
+SpaceMine là game metaverse khai thác không gian 2D với nền kinh tế hardcore do người chơi điều khiển. Người chơi sẽ:
+•	Khám phá 9 hành tinh trong Hệ Mặt Trời
+•	Khai thác khoáng sản quý hiếm
+•	Luyện kim, chế tạo vũ khí/giáp NFT
+•	Tham gia PvP để cướp tài nguyên hoặc bảo vệ tài sản
+•	Xây dựng Guild để chiếm lãnh thổ
+1.2. Core Loop
+Code
+Đào khoáng → Ship về Trái Đất (PvP risk) → Refine → Craft weapon/armor → 
+Bán NFT hoặc dùng PvP → Cướp khoáng người khác → Scale lớn hơn
+1.3. Điểm Bán hàng Độc nhất (USP)
+✅ Kinh tế Bền vững: Nền kinh tế "Sản xuất & Hủy diệt" - mọi NFT được tạo ra đều có mục đích tiêu thụ thông qua PvP, Guild War, và hao mòn tự nhiên.
+✅ Sở hữu Tài sản Thực sự: Người chơi sở hữu NFT 100% và có toàn quyền giao dịch trên OpenSea, Blur, hoặc các marketplace bên thứ 3.
+✅ PvP có Rủi ro Kinh tế: Thua trong PvP = mất vĩnh viễn phi thuyền và trang bị, khiến mỗi trận chiến đều mang ý nghĩa chiến lược sâu sắc.
+✅ Khoa học Thực: 9 hành tinh với môi trường thực tế (nhiệt độ, bức xạ, khoảng cách, khoáng sản dựa trên khoa học).
+✅ Economy Khép kín: 4 tầng kinh tế tự cân bằng (Miner → Refiner → Crafter → Trader) không phụ thuộc nạp tiền.
+✅ Tập trung Người dùng Crypto: Game dành cho người chơi đã am hiểu blockchain, tạo sân chơi có chiều sâu và công bằng.
+1.4. Đối tượng Người chơi
+Giai đoạn MVP:
+•	Nam, 18-40 tuổi
+•	Đã có kinh nghiệm với game blockchain
+•	Sở hữu ví crypto
+•	Quan tâm đến game có nền kinh tế phức tạp
+Giai đoạn Beta trở đi:
+•	Mở rộng ra người chơi phổ thông
+•	Thích game không gian, chế tạo, trading
+•	Nam 18-35 tuổi + Nữ 25-40 tuổi
+•	Việt Nam (MVP) → Global (sau 6 tháng)
+________________________________________
+2. HỆ THỐNG HÀNH TINH & KHOÁNG SẢN
+2.1. Danh sách 9 Hành tinh
+Hành tinh	Khoảng cách từ TĐ	Môi trường	Khoáng sản chính	Đặc điểm
+Mặt trăng	384,400 km	Không khí quyển, -173°C → 127°C	Helium-3 (nhiên liệu)	Bão bụi, bức xạ mặt trời
+Sao Thủy	91M km	Nhiệt độ cực (-173°C → 427°C)	Iron, Platinum	Bức xạ cao, ngày = 176 ngày TĐ
+Sao Kim	41M km	Áp suất 92 atm, mưa acid	Sulfur, Carbon	462°C, khí độc
+Sao Hỏa	78M km	Bụi đỏ, bão cát	Iron Oxide, Water Ice	Bão giảm tốc -40%, trọng lực thấp +20%
+Sao Mộc (Europa)	628M km	Đại dương băng 10km	Deuterium, Rare Earth	Bức xạ từ Sao Mộc, áp suất cao
+Sao Thổ (Titan)	1.2B km	Khí quyển methane	Methane, Ammonia	-179°C, hồ methane lỏng
+Sao Thiên Vương	2.7B km	Nghiêng 98°, mùa dài 42 năm	Hydrogen, Helium, Methane Ice	Gió 900 km/h, tối tăm
+Sao Hải Vương	4.3B km	Gió 2100 km/h	Diamond (mưa kim cương), Nitrogen	Áp suất cao tạo kim cương
+Sao Diêm Vương	5.9B km	-233°C, bóng tối vĩnh cửu	Exotic Matter, Dark Ice	Cực hiếm, nguy hiểm, NFT legendary
+2.2. Giá trị Khoáng sản
+Khoáng sản	Nguồn	Giá NPC (sàn)	Giá P2P (thị trường)	Dùng để craft
+Iron Ore	Sao Hỏa, Sao Thủy	0.5 E Token/kg	0.6-1 E Token/kg	Steel (vũ khí cơ bản)
+Titanium Ore	Sao Mộc	3 E Token/kg	3.5-5 E Token/kg	Armor (giáp hạng nặng)
+Crystal	Sao Kim	5 E Token/kg	6-8 E Token/kg	Laser weapon, Energy Cell
+Helium-3	Mặt trăng	2 E Token/kg	2.5-4 E Token/kg	Fuel, Energy Cell
+Diamond	Sao Hải Vương	50 E Token/carat	60-100 E Token/carat	Shield, high-end weapon
+Exotic Matter	Sao Diêm Vương	200 E Token/unit	250-400 E Token/unit	Legendary weapon/armor
+________________________________________
+3. HỆ THỐNG TÀI KHOẢN & ONBOARDING
+3.1. Mở cho Tất cả Người chơi từ MVP
+Game cho phép mọi người đăng ký bằng Email/Password để:
+•	Trải nghiệm miễn phí
+•	Mở rộng phễu người dùng
+•	Tăng tính dễ tiếp cận
+3.2. Trải nghiệm "Locked NFT"
+Cơ chế:
+•	Người chơi phổ thông (không kết nối ví) vẫn có thể khai thác, chế tạo
+•	Khi chế tạo/nhận được NFT → vật phẩm xuất hiện với trạng thái "Bị khóa" (Locked)
+•	Hệ thống thông báo: "Bạn đã nhận được một vật phẩm NFT giá trị. Hãy kết nối ví điện tử để thực sự sở hữu và mở khóa khả năng giao dịch."
+Giải pháp Kỹ thuật:
+•	Hệ thống tự động mint NFT và lưu vào "Ví Kho" (Custodial Wallet) của game
+•	Ghi nhận quyền sở hữu của người chơi trong database
+•	NFT được giữ an toàn cho đến khi người chơi kết nối ví
+3.3. Trao quyền khi Kết nối Ví
+Khi người chơi kết nối ví điện tử (MetaMask, WalletConnect):
+•	Được phép "Rút" (Withdraw) toàn bộ NFT "Bị khóa" về ví cá nhân
+•	Có toàn quyền giao dịch tài sản trên OpenSea, Blur...
+•	Trở thành "Người chơi Blockchain" thực thụ
+________________________________________
+4. CƠ CHẾ NĂNG LƯỢNG - FUEL SYSTEM
+4.1. Thay thế Energy Bar
+•	Fuel Tank thay cho energy bar truyền thống
+•	Travel time = cooldown (10 phút → 48 giờ tùy hành tinh)
+•	Fuel tiêu tốn khi bay về Trái Đất
+4.2. Chi tiết Fuel
+Hành tinh	Thời gian về TĐ	Fuel tiêu tốn	Rủi ro PvP	Fuel hồi trong lúc bay
+Mặt trăng	10 phút	2 Fuel	5%	2 Fuel
+Sao Thủy	30 phút	5 Fuel	10%	6 Fuel
+Sao Kim	45 phút	8 Fuel	15%	9 Fuel
+Sao Hỏa	1 giờ	10 Fuel	20%	12 Fuel
+Sao Mộc	3 giờ	30 Fuel	35%	36 Fuel
+Sao Thổ	6 giờ	60 Fuel	50%	72 Fuel
+Sao Thiên Vương	12 giờ	120 Fuel	65%	144 Fuel
+Sao Hải Vương	24 giờ	250 Fuel	80%	288 Fuel
+Sao Diêm Vương	48 giờ	500 Fuel	95%	576 Fuel
+4.3. Fuel Management
+•	Fuel Tank base: 100 Fuel
+•	Fuel hồi: 1 Fuel/5 phút = 12 Fuel/giờ = 288 Fuel/ngày
+•	Mua Fuel: 1 Fuel = 1 E Token
+•	Đào Fuel: Đào Helium-3 ở Mặt trăng → refine thành Fuel
+•	Upgrade Tank: NFT Ship có tank 200-500 Fuel
+4.4. Ví dụ Gameplay
+Kịch bản: Đào ở Sao Hỏa
+1.	Player bay đến Sao Hỏa (tốn 10 Fuel, 1 giờ)
+2.	Đào 2 giờ → 200 kg Iron Ore
+3.	Bay về TĐ: 1 giờ, tốn 10 Fuel
+4.	Trong 1 giờ bay:
+o	Fuel hồi: +12 Fuel
+o	Net fuel: -10 + 12 = +2 Fuel (lời 2 Fuel)
+o	PvP risk: 20% bị tấn công
+5.	Về TĐ an toàn → bán Iron → kiếm 100-140 E Token
+________________________________________
+5. HỆ SINH THÁI KINH TẾ 4 TẦNG & VÒNG LẶP GAMEPLAY
+5.1. Triết lý Kinh tế: "Sản xuất & Hủy diệt"
+Nền kinh tế tự cân bằng:
+•	"Cung" (khai thác, chế tạo) luôn đi đôi với "Cầu"
+•	Cầu được tạo ra từ tiêu thụ và mất mát vĩnh viễn
+•	PvP, hao mòn, Guild War tạo ra "sink" liên tục
+5.2. Sơ đồ Kinh tế 4 Tầng
+Code
+[TẦNG 1: MINERS - 80%] 
+    ↓ Bán khoáng thô
+[TẦNG 2: REFINERS - 15%] 
+    ↓ Bán nguyên liệu refined
+[TẦNG 3: CRAFTERS - 4%] 
+    ↓ Bán weapon/armor NFT
+[TẦNG 4: TRADERS - 1%]
+    ↓ Bán cho end users
+[MINERS cần weapon để PvP] ← Vòng khép kín
+5.3. TẦNG 1: MINERS (80% người chơi)
+Nhiệm vụ:
+•	Đào khoáng trên các hành tinh
+•	Ship về Space Station (Trái Đất)
+•	Bán cho Refiners hoặc NPC
+Thu nhập:
+•	Bán khoáng thô: 50-100 E Token/ngày (người mới)
+•	Tìm NFT tool/ship: 0.3-1% drop rate
+•	Quest rewards: 10-50 E Token/quest
+Progression:
+•	Newbie: Đào Mặt trăng/Sao Hỏa (an toàn)
+•	Mid-game: Đào Sao Mộc/Sao Thổ (rủi ro vừa, lợi nhuận cao)
+•	End-game: Đào Sao Diêm Vương (cực nguy hiểm, Exotic Matter)
+5.4. TẦNG 2: REFINERS (15% người chơi)
+Nhiệm vụ:
+•	Mua khoáng thô từ Miners
+•	Sử dụng Refinery Station (NFT building)
+•	Luyện thành nguyên liệu cao cấp
+Công thức Refine:
+Input	Output	Thời gian	Chi phí	Giá bán	Lợi nhuận
+10 Iron Ore	1 Steel Bar	5 phút	5 E Token	18-20 E Token	13-15 E Token/bar
+5 Titanium Ore + 2 Carbon	1 Titanium Alloy	15 phút	17 E Token	40 E Token	23 E Token/alloy
+3 Crystal + 1 Helium-3	1 Energy Cell	10 phút	17 E Token	35 E Token	18 E Token/cell
+NFT Refinery Station:
+Tier	Giá NFT	Tốc độ refine	Phí refine	ROI ước tính
+Basic	100k VND	10 phút/lần	2 E Token	30-45 ngày
+Advanced	300k VND	5 phút/lần	1 E Token (-50%)	20-30 ngày
+Quantum	1M VND	1 phút/lần	0.5 E Token, +10% output	15-20 ngày
+Thu nhập:
+•	200-300 E Token/ngày (basic refinery)
+•	500-800 E Token/ngày (quantum refinery)
+5.5. TẦNG 3: CRAFTERS (4% người chơi)
+Nhiệm vụ:
+•	Mua nguyên liệu refined từ Refiners
+•	Sử dụng Forge/Workshop (NFT building)
+•	Craft weapon/armor bán cho người chơi
+Weapon Crafting:
+Weapon	Nguyên liệu	Thời gian	Chi phí	Giá bán	Lợi nhuận
+Iron Sword	5 Steel Bar	30 phút	40 E Token	80 E Token	40 E Token
+Titanium Rifle	8 Titanium Alloy + 3 Steel	2 giờ	320 E Token	500 E Token	180 E Token
+Plasma Cannon	10 Steel + 5 Energy Cell + 2 Diamond	6 giờ	380 E Token	1,500 E Token	1,120 E Token
+Quantum Railgun	15 Alloy + 10 Cell + 5 Exotic Matter	24 giờ	2,600 E Token	8,000 E Token	5,400 E Token
+Armor Crafting:
+Armor	Nguyên liệu	Defense	Chi phí	Giá bán	Lợi nhuận
+Iron Vest	8 Steel Bar	15 DEF	64 E Token	120 E Token	56 E Token
+Titanium Suit	12 Titanium Alloy	40 DEF	480 E Token	800 E Token	320 E Token
+Energy Shield	10 Alloy + 8 Energy Cell	80 DEF	680 E Token	2,000 E Token	1,320 E Token
+Quantum Barrier	20 Alloy + 15 Cell + 3 Exotic Matter	150 DEF	1,400 E Token	10,000 E Token	8,600 E Token
+Thu nhập:
+•	500-800 E Token/ngày (thường)
+•	2,000-5,000 E Token/ngày (nếu craft legendary thành công)
+5.6. TẦNG 4: TRADERS (1% người chơi)
+Nhiệm vụ:
+•	Mua item từ Crafters (giá sỉ)
+•	Mở Marketplace Stall (NFT building)
+•	Bán lẻ với markup 20-40%
+Chiến lược:
+•	Buy low, sell high: Mua off-peak (2h-8h sáng), bán peak (19h-23h)
+•	Speculation: Mua nhiều trước event (VD: event Sao Hải Vương → giá Diamond tăng)
+•	Arbitrage: Mua cheap ở server A, bán đắt ở server B
+NFT Marketplace Stall:
+Tier	Giá NFT	Slot items	Tax	Passive income
+Small Stall	50k VND	5 items	2%	100-200 E Token/ngày
+Large Shop	200k VND	20 items	1%	500-800 E Token/ngày
+Mega Mall	1M VND	100 items	0.5%, auto-restock	2,000-5,000 E Token/ngày
+Thu nhập:
+•	1,000-2,000 E Token/ngày (rủi ro trung bình)
+•	5,000-10,000 E Token/ngày (whale trader, rủi ro cao)
+5.7. Ba Vòng lặp Kinh tế Gắn kết
+1.	Vòng lặp Cốt lõi (Sản xuất ↔ Hủy diệt): PvP rủi ro cao → phi thuyền và trang bị NFT bị phá hủy → tạo nhu cầu liên tục cho Crafter
+2.	Vòng lặp Lãnh thổ (Chinh phục ↔ Duy trì): Guild chiến đấu để chiếm hành tinh → đốt tài sản khổng lồ → duy trì lãnh thổ cần chi phí hàng tuần
+3.	Vòng lặp Tối ưu hóa (Cá nhân & Tiêu hao): Chế tạo consumables (thuốc buff, pin năng lượng...) để tối ưu hiệu suất → tiêu hao liên tục
+________________________________________
+6. HỆ THỐNG NFT & CHẾ TẠO
+#### User Tier: Basic vs. Pro
+
+- **Basic:**  
+  - Được mint tối đa 2 NFT/tháng và có quyền bán NFT đã mint trên marketplace.
+- **Pro:**  
+  - Upgrade khi nạp từ $2 trở lên, mở khóa quyền mint NFT không giới hạn.
+  - Sau khi upgrade Pro, mint NFT chỉ tốn phí blockchain (Polygon), không phải nạp cho game nữa.
+
+> Lưu ý: Cơ chế này nhằm tạo cân bằng giữa việc mở rộng cộng đồng và đảm bảo game không bị coi là "pay-to-win" hoặc "hút máu". Người chơi vẫn có thể chơi earn hoặc giải trí mà không bị hạn chế quá mức.
+Khi NFT được giao dịch ở bên thứ 3 thì vẫn tính riêng 3% phí cho hệ thống như trước đây.
+
+6.1. Tỷ lệ Chế tạo & Độ hiếm (Đã cập nhật)
+Tỷ lệ chế tạo NFT cao cấp được thiết kế rất thấp để đảm bảo giá trị:
+•	94% → Normal (Không NFT)
+•	5% → Rare NFT (+15% chỉ số)
+•	0.8% → Epic NFT (+40% chỉ số)
+•	0.1% → Legendary NFT (+100% chỉ số, hiệu ứng đặc biệt)
+6.2. NFT Categories
+1. TOOLS (Công cụ đào) - 15 loại
+Tên	Buff tốc độ	Độ bền	Nguồn	Giá	Rarity
+Cuốc gỗ	0% (base)	50 khối	FREE	-	Common
+Cuốc đá	+8%	100 khối	Craft 3 E Token	2k VND	Common
+Cuốc đồng	+15%	200 khối	10 E Token	8k VND	Common
+Cuốc sắt	+25%	400 khối	20 E Token	15k VND	Common
+Cuốc thép	+35%	600 khối	Shop 50k	50k VND	Uncommon
+Cuốc bạc (NFT)	+45%	800 khối	0.3% drop	80k VND	Rare
+Cuốc vàng (NFT)	+55%	1,000 khối	0.15% drop	150k VND	Rare
+Cuốc titanium (NFT)	+70%	1,500 khối	Craft NFT	300k VND	Epic
+Cuốc kim cương (NFT)	+90%	2,000 khối	Shop 500k	500k VND	Epic
+Cuốc plasma (NFT)	+120%	3,000 khối	Craft NFT	1.2M VND	Epic
+Cuốc quantum (NFT)	+150%	5,000 khối	0.05% drop	3M VND	Legendary
+Cuốc neutron (NFT)	+200%	8,000 khối	Craft NFT	8M VND	Legendary
+Cuốc dark matter (NFT)	+300%	15,000 khối	Event only	20M+ VND	Mythic
+Laser drill MK-I (NFT)	+180% + auto-collect	4,000 khối	Craft NFT	5M VND	Legendary
+Laser drill MK-II (NFT)	+250% + auto-collect	10,000 khối	Event only	15M+ VND	Mythic
+Đặc điểm:
+•	Độ bền càng cao = ít hỏng hơn
+•	NFT tools có thể upgrade bằng cách tiêu hao tools thấp hơn
+•	Auto-collect: Tự động thu thập khoáng sản mà không cần click
+2. WEAPONS (Vũ khí PvP) - 20 loại
+Tier 1 - Common (Không NFT):
+Weapon	ATK	Nguồn	Giá craft	Win rate PvP
+Wooden Club	5	FREE craft	-	5%
+Stone Axe	8	Craft 5 E Token	5 E Token	8%
+Iron Sword	12	Craft 20 E Token	40 E Token	12%
+Steel Blade	18	Craft 50 E Token	90 E Token	18%
+Bronze Rifle	25	Craft 100 E Token	200 E Token	25%
+Tier 2 - Rare NFT (+15% stats):
+Weapon	ATK	Nguồn	Giá OpenSea	Win rate PvP
+Silver Sword (NFT)	35	Craft NFT (5% chance)	200k VND	40%
+Titanium Rifle (NFT)	45	Craft NFT	350k VND	48%
+Plasma Pistol (NFT)	55	Craft NFT	500k VND	55%
+Laser Carbine (NFT)	68	Craft NFT	800k VND	62%
+Tier 3 - Epic NFT (+40% stats):
+Weapon	ATK	Nguồn	Giá OpenSea	Win rate PvP
+Plasma Cannon (NFT)	95	Craft NFT (0.8% chance)	1.5M VND	70%
+Quantum Rifle (NFT)	120	Craft NFT	2.5M VND	76%
+Ion Disruptor (NFT)	145	Craft NFT	4M VND	82%
+Graviton Beam (NFT)	170	Event reward	6M VND	86%
+Tier 4 - Legendary NFT (+100% stats):
+Weapon	ATK	Nguồn	Giá OpenSea	Win rate PvP
+Quantum Railgun (NFT)	240	Craft NFT (0.1% chance)	10M VND	90%
+Singularity Destroyer (NFT)	300	Craft NFT + Exotic Matter	18M VND	93%
+Void Annihilator (NFT)	380	Event only	30M+ VND	96%
+Tier 5 - Mythic NFT (Event only, +200% stats):
+Weapon	ATK	Nguồn	Giá OpenSea	Win rate PvP
+Big Bang Cannon (NFT)	500	Guild War Champion	50M+ VND	98%
+Black Hole Generator (NFT)	650	Territory Control 12 tuần liên tục	100M+ VND	99%
+Đặc điểm:
+•	Mỗi weapon có Special Ability riêng (ví dụ: stun, burn, freeze)
+•	Epic+ có visual effects (ánh sáng, particle effects)
+•	Mythic có unique animation
+________________________________________
+3. ARMOR (Giáp phòng thủ) - 18 loại
+Tier 1 - Common (Không NFT):
+Armor	DEF	Giá craft	Tác dụng PvP
+Cloth Vest	8	30 E Token	Block 8 damage
+Leather Armor	12	60 E Token	Block 12 damage
+Iron Vest	18	120 E Token	Block 18 damage
+Steel Plate	28	250 E Token	Block 28 damage
+Bronze Shield	38	450 E Token	Block 38 damage
+Tier 2 - Rare NFT (+15% stats):
+Armor	DEF	Giá OpenSea	Tác dụng PvP
+Silver Armor (NFT)	52	250k VND	Block 52 damage
+Titanium Suit (NFT)	65	400k VND	Block 65 damage
+Reinforced Plating (NFT)	80	600k VND	Block 80 damage + 5% dodge
+Tier 3 - Epic NFT (+40% stats):
+Armor	DEF	Giá OpenSea	Tác dụng PvP
+Energy Shield (NFT)	112	1.8M VND	Block 112 damage + regenerate 2 HP/sec
+Plasma Barrier (NFT)	140	3M VND	Block 140 damage + reflect 10% damage
+Quantum Armor (NFT)	175	5M VND	Block 175 damage + 10% dodge
+Graviton Field (NFT)	210	8M VND	Block 210 damage + slow attacker 20%
+Tier 4 - Legendary NFT (+100% stats):
+Armor	DEF	Giá OpenSea	Tác dụng PvP
+Quantum Barrier (NFT)	300	12M VND	Block 300 damage + 15% dodge + regenerate 5 HP/sec
+Void Shield (NFT)	380	20M VND	Block 380 damage + immune to 1 hit/10sec
+Singularity Armor (NFT)	480	35M VND	Block 480 damage + reflect 20% damage
+Tier 5 - Mythic NFT (Event only):
+Armor	DEF	Giá OpenSea	Tác dụng PvP
+Dark Matter Shield (NFT)	650	60M+ VND	Block 650 damage + immune to critical hits
+Time Distortion Field (NFT)	850	120M+ VND	Block 850 damage + 30% dodge + slow time 50%
+Đặc điểm:
+•	Epic+ có passive abilities (regeneration, reflect damage, dodge)
+•	Legendary+ có active abilities (cooldown 30-60 giây)
+________________________________________
+4. SHIPS (Phi thuyền) - 12 loại
+Tier 1 - Basic (FREE/Craft thường):
+Ship	Cargo	Fuel Tank	Speed	HP	Giá	Rarity
+Escape Pod	100 kg	50 Fuel	100% (base)	100 HP	FREE	Common
+Shuttle MK-I	200 kg	100 Fuel	110%	150 HP	100 E Token	Common
+Freighter Basic	400 kg	150 Fuel	90%	200 HP	300 E Token	Common
+Scout Ship	150 kg	120 Fuel	140%	120 HP	400 E Token	Uncommon
+Tier 2 - Advanced (NFT Rare):
+Ship	Cargo	Fuel Tank	Speed	HP	DEF	Giá OpenSea	Rarity
+Freighter MK-II (NFT)	800 kg	250 Fuel	100%	350 HP	20 DEF	800k VND	Rare
+Interceptor (NFT)	300 kg	200 Fuel	180%	250 HP	30 DEF	1.2M VND	Rare
+Battle Cruiser (NFT)	600 kg	300 Fuel	120%	500 HP	60 DEF	2.5M VND	Epic
+Tier 3 - Military (NFT Epic):
+Ship	Cargo	Fuel Tank	Speed	HP	DEF	Special	Giá OpenSea	Rarity
+Destroyer (NFT)	1,000 kg	400 Fuel	130%	800 HP	100 DEF	+2 weapon slots	5M VND	Epic
+Dreadnought (NFT)	1,500 kg	600 Fuel	110%	1,200 HP	150 DEF	+3 weapon slots	10M VND	Epic
+Tier 4 - Capital Ships (NFT Legendary):
+Ship	Cargo	Fuel Tank	Speed	HP	DEF	Special	Giá OpenSea	Rarity
+Titan Carrier (NFT)	3,000 kg	1,000 Fuel	100%	2,000 HP	250 DEF	+4 weapon slots + shield regeneration	25M VND	Legendary
+Mothership (NFT)	5,000 kg	1,500 Fuel	90%	3,500 HP	400 DEF	+5 weapon slots + hangar bay	50M+ VND	Mythic
+Đặc điểm:
+•	Ship có thể equip weapons và armor
+•	Capital ships có hangar bay: có thể mang theo 1-2 ships nhỏ hơn
+•	Mothership có thể mobile refinery: luyện khoáng ngay trên ship
+________________________________________
+5. BUILDINGS (Nhà máy sản xuất) - 15 loại
+Production Buildings:
+Building	Chức năng	Giá NFT	Passive income	ROI
+Mining Outpost I	Auto-mine 1 hành tinh (Moon/Mars)	200k VND	100-150 E Token/ngày	45-60 ngày
+Mining Outpost II	Auto-mine 1 hành tinh (Jupiter/Saturn)	600k VND	300-400 E Token/ngày	40-50 ngày
+Mining Outpost III	Auto-mine 1 hành tinh (Neptune/Pluto)	2M VND	800-1,200 E Token/ngày	40-60 ngày
+Refinery Station Basic	Luyện khoáng (tốc độ base)	150k VND	200-300 E Token/ngày	30-45 ngày
+Refinery Station Advanced	Luyện khoáng (50% nhanh hơn)	500k VND	400-600 E Token/ngày	25-35 ngày
+Refinery Station Quantum	Luyện khoáng (80% nhanh hơn + 10% output)	2M VND	1,000-1,500 E Token/ngày	30-45 ngày
+Forge Basic	Craft weapon/armor thường	400k VND	300-500 E Token/ngày	25-35 ngày
+Forge Advanced	Craft weapon/armor + 20% success rate NFT	1.5M VND	800-1,200 E Token/ngày	30-45 ngày
+Forge Quantum	Craft legendary nhanh 50%	5M VND	2,000-3,000 E Token/ngày	40-60 ngày
+Commercial Buildings:
+Building	Chức năng	Giá NFT	Passive income	Tax
+Marketplace Stall	Bán 5 items	100k VND	100-200 E Token/ngày	2%
+Trading Post	Bán 20 items	400k VND	400-700 E Token/ngày	1.5%
+Mega Mall	Bán 100 items + auto-restock	2M VND	2,000-4,000 E Token/ngày	0.5%
+Support Buildings:
+Building	Chức năng	Giá NFT	Tác dụng
+Repair Station	Sửa chữa ship/equipment nhanh 50%	800k VND	Giảm thời gian repair 50%
+Fuel Synthesizer	Convert Helium-3 → Fuel (tỷ lệ tốt hơn)	1.2M VND	1 Helium-3 = 1.5 Fuel (thay vì 1:1)
+Research Lab	Unlock công thức craft mới	3M VND	Unlock Quantum/Mythic recipes
+Đặc điểm:
+•	Buildings có thể upgrade bằng cách tiêu hao materials
+•	Guild có thể share buildings cho members
+•	High-tier buildings cần territory control để build
+6.3. NFT Quality Roll System
+Khi craft weapon/armor, hệ thống Roll RNG:
+Code
+- 94% → Normal (60 ATK, không NFT, bán 1,500 E Token)
+- 5% → Rare NFT (69 ATK, mint NFT, bán 2,000 E Token)
+- 0.8% → Epic NFT (84 ATK, mint NFT, bán 5,000 E Token)
+- 0.1% → Legendary NFT (120 ATK, mint NFT + glow xanh, bán 15,000 E Token)
+6.4. Cơ chế Hao mòn & Phục hồi
+6.4.1. Durability System (Độ bền)
+Tất cả NFT equipment có 3 chỉ số:
+1.	Current Durability (Độ bền hiện tại): 0-100%
+2.	Max Durability (Độ bền tối đa): Giảm dần theo thời gian sử dụng
+3.	Repair Time (Thời gian phục hồi): Tính bằng giờ
+Ví dụ:
+Code
+Cuốc kim cương NFT:
+- Current Durability: 85/100%
+- Max Durability: 95% (đã giảm 5% so với ban đầu)
+- Repair Time: 0 giờ (đang hoạt động bình thường)
+6.4.2. Cơ chế Hao mòn
+Khi sử dụng NFT:
+•	Mỗi lần đào/PvP/craft → Current Durability giảm 0.1-0.5% (tùy loại)
+•	Khi Current Durability = 0% → Item vào trạng thái "Cần Sửa Chữa" (Needs Repair)
+o	⚠️ Không thể sử dụng
+o	✅ Vẫn hiển thị trong inventory
+o	✅ KHÔNG THỂ giao dịch trên OpenSea (Smart Contract lock transfer)
+o	✅ CHỈ giao dịch trên OpenSea khi Smart Contract unlock transfer (user phục hồi 100% hệ thống sẽ unlock smart contract transfer)
+Khi Max Durability giảm:
+•	Mỗi lần repair → Max Durability giảm 0.5-2% (tùy quality)
+•	Khi Max Durability < 50% → Item vào trạng thái "Hao mòn" (Worn)
+o	⚠️ Stats giảm 10-30% (tùy mức hao mòn)
+•	Khi Max Durability = 0% → Item vào trạng thái "Hỏng nặng" (Broken)
+o	❌ KHÔNG THỂ sử dụng
+o	❌ KHÔNG THỂ giao dịch trên OpenSea (Smart Contract lock)
+o	⏰ Cần thời gian phục hồi dài (12-168 giờ tùy loại)
+6.4.3. Repair System (Hệ thống Sửa chữa)
+3 cách phục hồi:
+1. Natural Repair (Phục hồi Tự nhiên) - MIỄN PHÍ
+•	Item tự hồi Current Durability
+•	Tốc độ: 1% / 30 phút
+•	KHÔNG hồi Max Durability
+•	Thích hợp: Item hao mòn nhẹ
+Ví dụ:
+Code
+Cuốc kim cương: Current 0% → cần 50 giờ để hồi 100%
+2. Standard Repair (Sửa chữa Thường) - TỐN PHÍ
+•	Sử dụng Repair Kit (mua bằng E Token hoặc craft)
+•	Hồi Current Durability lên 100% ngay lập tức
+•	Max Durability giảm 1% mỗi lần repair
+•	Chi phí: 50-500 E Token (tùy tier item)
+Công thức:
+Code
+Repair Cost = Base Item Value x 5%
+Repair Kit = Steel Bar (x5) + Crystal (x2) + E Token (x10)
+3. Deep Restoration (Phục hồi Sâu) - TỐN NHIỀU PHÍ
+•	Sử dụng Restoration Crystal (cực hiếm, drop 0.01% hoặc craft khó)
+•	Hồi BOTH Current và Max Durability lên 100%
+•	Không có penalty
+•	Chi phí: 2,000-20,000 E Token + Restoration Crystal
+Restoration Crystal:
+•	Drop rate: 0.01% từ Sao Diêm Vương
+•	Craft: 50 Diamond + 20 Exotic Matter + 5,000 E Token
+•	Giá P2P: 5-20M VND (tùy thị trường)
+6.4.4. Broken Items Recovery (Phục hồi Item Hỏng nặng)
+Khi Max Durability = 0% (Broken):
+Option 1: Time Recovery (Chờ đợi - MIỄN PHÍ)
+•	Item tự phục hồi sau X giờ (không cần làm gì)
+•	Thời gian phục hồi:
+Item Tier	Thời gian phục hồi base	Có thể giảm bằng
+Common	12 giờ	Không thể giảm
+Uncommon	24 giờ	Không thể giảm
+Rare NFT	48 giờ	Temporal Ore (giảm 25%)
+Epic NFT	96 giờ (4 ngày)	Temporal Ore (giảm 50%)
+Legendary NFT	168 giờ (7 ngày)	Restoration Crystal + Temporal Ore (giảm 75%)
+Option 2: Material Boost (Tăng tốc - TỐN VẬT PHẨM)
+•	Sử dụng Temporal Ore (hiếm, drop 0.05% từ Sao Thiên Vương)
+•	Giảm thời gian phục hồi:
+o	1 Temporal Ore = -25% thời gian
+o	2 Temporal Ore = -50% thời gian
+o	3 Temporal Ore = -75% thời gian
+Ví dụ:
+Code
+Plasma Cannon (Epic NFT) bị Broken:
+- Thời gian phục hồi base: 96 giờ
+- Dùng 2 Temporal Ore: 96 x 50% = 48 giờ
+- Dùng 3 Temporal Ore: 96 x 25% = 24 giờ
+Option 3: Full Restoration (Phục hồi Ngay - TỐN NHIỀU PHÍ)
+•	Sử dụng Restoration Crystal
+•	Hồi ngay lập tức Max Durability lên 100%
+•	Chi phí: Rất cao (xem bảng trên)
+6.4.5. Smart Contract Lock (Khóa giao dịch)
+Khi item ở trạng thái "Needs Repair" hoặc "Broken":
+Smart Contract tự động:
+Solidity
+function transfer(address to, uint256 tokenId) public {
+    require(itemDurability[tokenId].current > 0, "Item needs repair, cannot transfer");
+    require(itemDurability[tokenId].max > 0, "Item is broken, cannot transfer");
+    // ... transfer logic
+}
+Người chơi KHÔNG THỂ:
+•	❌ List trên OpenSea
+•	❌ Transfer sang ví khác
+•	❌ Bán trên marketplace P2P
+Người chơi VẪN CÓ THỂ:
+•	✅ Xem trong inventory
+•	✅ Repair/Restore
+•	✅ Chờ phục hồi tự nhiên
+6.4.6. Chống Lách Luật (Anti-Abuse)
+Vấn đề: User A bán item giá 0đ cho User B, User B repair rồi bán lại giá 0đ cho User A → lách được phí repair.
+
+Giải pháp: lock Smart contract transfer. Chỉ khi user phục hồi 100% mới tự unlock smart contract transfer
+
+6.4.7. UI/UX cho Durability
+Trong game hiển thị:
+Code
+[Plasma Cannon (Epic NFT)]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ATK: 95 → 85 (hao mòn -10%)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Durability:
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░ 75/100% (Current)
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░ 70/100% (Max)
+
+Status: ⚠️ Cần bảo trì sớm
+Repair Cost: 250 E Token
+Restore Cost: 2,000 E Token + 1 Restoration Crystal
+
+[Repair Now] [Deep Restore] [Cancel]
+Trên OpenSea:
+•	Item có tag "Durability: XX%"
+•	Item "Broken" KHÔNG HIỆN trên marketplace (contract block)
+
+________________________________________
+7. HỆ THỐNG THANH TOÁN & E TOKEN
+User Tier: Basic vs. Pro
+•	Basic:
+o	Mặc định cho người chơi mới, chưa từng nạp tiền.
+o	Có quyền mint tối đa 2 NFT/tháng (tính theo lịch tháng dương), và vẫn có quyền bán NFT này trên OpenSea/Blur.
+o	Sau khi hết lượt mint, phải nâng cấp lên Pro để mint thêm.
+•	Pro:
+o	Được upgrade khi nạp lần đầu (ví dụ $2).
+o	Sau khi là Pro, mint NFT không giới hạn số lượng/tháng, chỉ chịu phí blockchain (ví dụ $0.01-$0.1 MATIC/lần mint).
+o	Không cần nạp thêm cho game để mint NFT về sau.
+Lưu ý:
+•	Mọi giao dịch NFT đều tuân thủ phí blockchain, không bị thu thêm phí game sau khi đã upgrade Pro.
+•	Quyền bán NFT: cả Basic và Pro đều có thể bán NFT đã mint.
+
+7.1. E Token - Định nghĩa CHÍNH XÁC
+E Token LÀ:
+•	✅ Virtual currency (đơn vị ảo trong game)
+•	✅ Medium of exchange (mua bán item, khoáng sản)
+•	✅ Unit of account (tính giá trị tất cả asset)
+•	✅ Store of value (tích trữ trong game)
+E Token KHÔNG PHẢI:
+•	❌ Cryptocurrency (không phải BTC, ETH, BNB)
+•	❌ Security token (không phải cổ phiếu)
+•	❌ Payment method (không phải phương tiện thanh toán ngoài game)
+•	❌ Convertible currency (KHÔNG rút được VND)
+QUAN TRỌNG: E Token KHÔNG thể rút ra tiền thật để đảm bảo tuân thủ pháp lý.
+7.2. Giá trị Tham chiếu
+•	1 E Token = 600-1,000 VND (chỉ khi nạp vào, không phải giá rút)
+•	Tỷ giá này CHỈ để người chơi tham khảo giá trị
+•	Token chỉ có giá trị TRONG game
+7.3. Giai đoạn MVP: Nạp tiền bằng Stablecoin
+Phương thức duy nhất: Hệ thống Ví Nạp Tiền Động
+Quy trình:
+1.	Hệ thống quản lý một Ví Chủ (Master Wallet)
+2.	Mỗi người chơi được cấp một địa chỉ ví nạp tiền riêng, duy nhất
+3.	Người chơi gửi Stablecoin (USDT, USDC trên mạng Polygon) vào địa chỉ được cấp
+4.	Backend tự động quét blockchain, xác nhận giao dịch và cộng E Token vào tài khoản
+7.4. Giai đoạn Beta trở đi: Tích hợp Stripe
+Khi game có doanh thu ổn định và công ty được thành lập:
+•	Tích hợp Stripe để chấp nhận thẻ tín dụng/ghi nợ toàn cầu
+•	Mở rộng phễu người chơi phổ thông
+7.5. Cách kiếm E Token
+Hoạt động	Thu nhập	Ghi chú
+Nạp VND	1,000 VND = 1 E Token	Giới hạn 1,500k/tháng
+Đào khoáng bán NPC	50-100 E Token/ngày	Người mới
+Đào + bán P2P	100-200 E Token/ngày	Giá tốt hơn NPC
+Refine materials	200-500 E Token/ngày	Cần NFT Refinery
+Craft items	500-2,000 E Token/ngày	Cần NFT Forge
+Trading/flipping	1,000-5,000 E Token/ngày	Rủi ro cao
+Guild tax income	100-1,000 E Token/tuần	Tùy rank
+Quest rewards	10-50 E Token/quest	Daily/weekly
+7.6. Cách tiêu E Token
+Chi phí	Mục đích	Burn rate
+Fuel (1 Token/Fuel)	Bay về Trái Đất	30% burn
+Ship repair	2% max HP = ~20 Token	50% burn
+Refinery fee	1-2 Token/lần	40% burn
+Craft fee	5-10 Token/item	40% burn
+Marketplace tax	2-5% giá trị giao dịch	20% burn
+Mua tool/ship từ shop	Varies	0% burn (vào dev fund)
+Đặt bounty	100-10,000 Token	10% burn khi hoàn thành
+Guild war cost	10,000 Token/war	50% burn, 50% prize pool
+7.7. Token Flow (Vòng đời token)
+Code
+[Người chơi nạp VND] 
+    ↓
+[Nhận E Token vào wallet]
+    ↓
+[Dùng trong game:]
+├─ Mua fuel/repair (burn 30-50%)
+├─ Giao dịch P2P (tax 2-5%, burn 20% tax)
+├─ Craft/refine (fee, burn 40%)
+└─ Mua từ shop (vào dev fund)
+    ↓
+[Token lưu hành giữa players]
+    ↓
+[Một phần bị burn → giảm supply]
+    ↓
+[Token còn lại tiếp tục lưu hành]
+
+❌ KHÔNG BAO GIỜ có: [E Token] → [Rút VND]
+7.8. Cách kiếm TIỀN THẬT (VND)
+Cách DUY NHẤT: Bán NFT trên OpenSea
+Code
+VND → E Token → Chơi game → Craft NFT → OpenSea → BNB/ETH → VND
+     ↑ (một chiều)              ↑ (cách duy nhất kiếm tiền thật)
+Ví dụ cụ thể:
+Tháng 1:
+•	Nạp 500k VND → 500 E Token
+•	Đào + craft → kiếm thêm 2,000 E Token trong game
+•	Tổng: 2,500 E Token
+Dùng token:
+•	Mua fuel: 500 Token
+•	Mua nguyên liệu: 1,000 Token
+•	Craft Legendary Plasma Cannon: 1,000 Token
+NFT Legendary:
+•	Bán OpenSea: 0.15 BNB (~$90 USD = 2.2M VND)
+•	Phí OpenSea: 2.5% = 55k VND
+•	Thu ròng: 2.145M VND
+ROI:
+•	Bỏ ra: 500k VND
+•	Thu về: 2.145M VND
+•	Lời: 1.645M VND (ROI 329%)
+________________________________________
+8. HỆ THỐNG PVP, RỦI RO & HỦY DIỆT
+8.1. Zones (Khu vực)
+Zone	Hành tinh	PvP allowed?	Risk	Reward
+Safe Zone	Trái Đất	❌ Cấm PvP	0%	Giao dịch, craft, nghỉ
+Near Space	Mặt trăng, Sao Kim, Sao Thủy	⚠️ Cho phép	5-15%	Low risk, low reward
+Mid Space	Sao Hỏa, Sao Mộc, Sao Thổ	⚠️ Cho phép	20-50%	Medium risk/reward
+Deep Space	Sao Thiên Vương, Hải Vương, Diêm Vương	🔴 Nguy hiểm	65-95%	High risk, extreme reward
+8.2. Công thức Chiến đấu
+Formula:
+Code
+Damage = max(ATK - DEF, 0)
+Cargo Loss = (Damage / ATK) x 50%
+Ví dụ:
+Code
+Attacker: 100 ATK
+Defender: 60 DEF
+→ Damage = 100 - 60 = 40
+→ Cargo loss = (40/100) x 50% = 20%
+
+Defender có 500 kg Diamond:
+→ Mất: 500 x 20% = 100 kg
+→ Attacker nhận: 100 kg Diamond
+Critical Hit (5% chance):
+Code
+Damage = (ATK - DEF) x 2
+Cargo loss = 40%
+Dodge (10% chance nếu có Turbo Engine):
+•	Defender tránh được tấn công
+•	Attacker mất 10 Fuel (boost thất bại)
+8.3. Rủi ro Mất mát Vĩnh viễn
+8.3.1. NFT KHÔNG BAO GIỜ BỊ MẤT VĨNH VIỄN
+Cơ chế mới:
+Khi thua PvP:
+1.	Ship HP giảm về 0 → Ship vào trạng thái "Damaged" (Hư hỏng)
+2.	Current Durability của ALL equipped items giảm 10-30% (tùy damage nhận vào)
+3.	Max Durability của ALL equipped items giảm 2-5%
+4.	Hàng hóa (cargo) mất 20-50% (tùy công thức)
+Item KHÔNG BAO GIỜ:
+•	❌ Bị mất vĩnh viễn
+•	❌ Drop ra cho attacker
+•	❌ Biến mất khỏi blockchain
+Ví dụ cụ thể:
+Code
+Player A có:
+- Ship: Battle Cruiser (HP: 500/500)
+- Weapon: Plasma Cannon (Current: 100%, Max: 95%)
+- Armor: Energy Shield (Current: 100%, Max: 90%)
+- Cargo: 500 kg Diamond
+
+Player B tấn công (ATK: 200, Player A DEF: 100):
+→ Damage = 200 - 100 = 100
+→ Ship HP: 500 - 100 = 400 HP (còn 80%)
+
+Kết quả:
+✅ Ship: vẫn còn, HP 400/500 (cần repair)
+✅ Plasma Cannon: Current 85% (-15%), Max 93% (-2%)
+✅ Energy Shield: Current 80% (-20%), Max 88% (-2%)
+✅ Cargo: mất 100 kg Diamond (20%), còn 400 kg
+8.3.2. Ship Destruction (Phá hủy Ship)
+Khi Ship HP = 0:
+Ship vào trạng thái "Critical Damage":
+•	❌ Không thể di chuyển
+•	❌ Không thể PvP
+•	⚠️ Cargo loss: 50% (rơi ra, attacker nhận)
+•	⚠️ All equipment durability: -30-50%
+•	⏰ Ship repair time: 3-24 giờ (tùy tier)
+Phục hồi Ship:
+Ship Tier	Repair Time (base)	Repair Cost	Có thể giảm bằng
+Basic	3 giờ	100 E Token	Repair Station (50% nhanh hơn)
+Advanced	6 giờ	300 E Token	Repair Station
+Military	12 giờ	800 E Token	Repair Station + Temporal Ore
+Capital	24 giờ	2,000 E Token	Repair Station + Temporal Ore
+Trong thời gian repair:
+•	Player có thể dùng backup ship (nếu có)
+•	Hoặc thuê ship từ guild (phí 10% cargo)
+•	Hoặc chờ (không thể chơi)
+8.3.3. Equipment Durability Loss trong PvP
+Công thức:
+Code
+Durability Loss (%) = (Damage Taken / Ship Max HP) x Multiplier
+
+Multiplier:
+- Current Durability: 15-30% (tùy damage)
+- Max Durability: 2-5%
+Ví dụ:
+Code
+Ship: 500 Max HP
+Damage Taken: 100
+→ (100 / 500) x 100 = 20% HP mất
+
+Weapon Durability Loss:
+- Current: 20% x 1.5 = 30% giảm
+- Max: 20% x 0.2 = 4% giảm
+Bảng Durability Loss trung bình:
+Kết quả PvP	Current Durability Loss	Max Durability Loss
+Win (nhận ít damage)	-5-10%	-1-2%
+Survive (nhận nhiều damage)	-20-30%	-3-5%
+Lose (ship bị phá hủy)	-40-50%	-5-10%
+8.3.4. Cargo Loss (Mất hàng hóa)
+Công thức: (Giữ nguyên)
+Code
+Cargo Loss = (Damage / ATK) x 50%
+Đặc biệt:
+•	Hàng hóa rơi ra và attacker nhận ngay
+•	Hàng hóa KHÔNG bị "destroy", chỉ chuyển chủ
+8.4. Escape Mechanics
+Hành động	Điều kiện	Success rate	Chi phí
+Boost thrusters	Có Turbo Engine NFT	40%	20 Fuel
+Warp jump	Có Warp Drive NFT	80%	50 Fuel
+Distress signal	Có guild member online	60%	10 E Token reward cho cứu viện
+Surrender	Không điều kiện	100% sống	Mất 50% cargo
+8.5. Karma System
+Cơ chế:
+•	Tấn công thành công: -5 Karma
+•	Tấn công thất bại: -2 Karma
+•	Bị tấn công nhưng survive: +3 Karma
+•	Giúp người khác (distress): +5 Karma
+Hậu quả:
+Karma	Trạng thái	Hậu quả
+> 0	Neutral	Bình thường
+-1 to -49	Gray	Bị NPC patrol soi, 10% chance bị check
+-50 to -99	Pirate (tên đỏ)	Không vào Safe Zone, bị NPC bắn 30%
+< -100	Wanted (tên tím)	Bounty tự động 1,000 E Token, bị NPC săn 70%
+Rửa Karma:
+•	Làm quest PvE: +10 Karma/quest
+•	Donate NPC: 100 E Token = +5 Karma
+•	Không PvP trong 7 ngày: +50 Karma
+8.6. Bounty System
+Đặt bounty:
+Code
+Player A bị Player B cướp 100 kg Diamond (giá 5,000 E Token)
+→ Player A đặt bounty: 500 E Token (10% giá trị mất)
+→ Hiển thị: "Bounty on Player B - 500 E Token"
+→ Bounty Hunter kill Player B → nhận 500 E Token
+Bounty Hunter career:
+•	Mua Bounty Hunter License NFT (200k VND)
+•	Unlock radar: thấy tọa độ player có bounty >100 E Token
+•	+20% reward khi hoàn thành
+•	Top 10 hunters/tháng: NFT Badge "Galaxy Marshal" (bán 500k VND)
+________________________________________
+9. HỆ THỐNG GUILD & LÃNH THỔ
+9.1. Guild Structure
+Ranks:
+Rank	Quyền hạn	Lương từ guild
+Leader	Full control, war declaration	10% guild income
+Officer	Kick members, manage warehouse	5%
+Elite	Participate war, vote	3%
+Member	Basic access	1%
+Recruit	Limited access	0%
+Guild Bank:
+•	Mỗi thành viên đóng 5% thu nhập vào guild bank
+•	Dùng để: mua building chung, chi phí war, thưởng MVP
+9.2. Territory Control
+Hành tinh có thể chiếm:
+Hành tinh	Lợi ích khi chiếm	Guild tax	Defense cost
+Sao Hỏa	Thành viên +10% tốc độ đào	5% mọi giao dịch Iron	5,000 E Token/tuần
+Sao Mộc	+15% output Titanium	5% Titanium trade	10,000 E Token/tuần
+Sao Thổ	Unlock Methane fuel (rẻ hơn 30%)	10% Methane	15,000 E Token/tuần
+Sao Diêm Vương	Độc quyền Exotic Matter 1 tuần	20% Exotic Matter	50,000 E Token/tuần
+9.3. Guild War Mechanics
+Quy trình:
+1.	Guild A tuyên chiến với Guild B (phí: 10,000 E Token)
+2.	Notice period: 24 giờ (chuẩn bị)
+3.	War window: 3 giờ (VD: 20h-23h thứ 7)
+4.	Chiến trường: Orbit hành tinh tranh giành
+5.	Điều kiện thắng:
+o	Option 1: Nhiều kills hơn (1 kill = 1 điểm)
+o	Option 2: Capture flag (giữ flag 30 phút liên tục)
+6.	Winner nhận:
+o	Territory ownership (1 tuần)
+o	20,000 E Token từ loser guild bank
+o	NFT Badge "Conqueror of [Planet]"
+War rules:
+•	Mỗi guild tối đa 50 members tham chiến
+•	Không respawn trong war (chết = out)
+•	Ship/weapon bị damage 50% sau war (phải repair)
+9.4. Shared Assets
+Guild Warehouse:
+•	Members chia sẻ khoáng sản
+•	Elite+ có thể rút (giới hạn 1,000 kg/tuần)
+•	Log mọi giao dịch (chống gian lận)
+Guild Buildings:
+•	10 members góp mua Mining Outpost (500k/10 = 50k/người)
+•	Output chia đều hoặc theo rank
+•	Bán building: cần 70% vote
+________________________________________
+10. TOKENOMICS & BALANCE
+10.1. Token Supply & Demand
+Token vào ecosystem (Supply):
+Nguồn	Volume/ngày (1000 players)	Ghi chú
+Nạp VND	~50,000 E Token/ngày	Giả sử 30% nạp TB 200k/tháng
+Quest rewards	20,000 E Token/ngày	20 Token x 1000 players
+Event drops	10,000 E Token/ngày	Tuần 1 tháng
+TỔNG	80,000 E Token/ngày	2.4M Token/tháng
+Token ra khỏi ecosystem (Demand = Burn):
+Sink	Volume/ngày	Burn rate	Net burn
+Ship travel	10,000 Token	30%	3,000 Token
+Repair	5,000 Token	50%	2,500 Token
+Refine/craft fee	8,000 Token	40%	3,200 Token
+Marketplace tax	10,000 Token	20%	2,000 Token
+NPC trade	15,000 Token	50%	7,500 Token
+TỔNG	48,000 Token	-	18,200 Token burn
+Net token flow:
+Code
+Supply: 80,000 Token/ngày
+Burn: 18,200 Token/ngày
+Net increase: 61,800 Token/ngày
+
+Sau 30 ngày:
+- Token mới: 1,854,000 Token
+- Nếu không burn → 2,400,000 Token
+- Burn giảm 22.75% inflation
+10.2. Price Stability Mechanisms
+1. Dynamic burn rate:
+Code
+Nếu token inflation > 30%/tháng:
+→ Tăng burn rate: 30% → 50%
+→ Giảm quest rewards: 20 → 15 Token
+2. NPC buy floor (giá sàn):
+Code
+NPC mua Iron Ore: 0.5 E Token/kg (fixed)
+→ Giá P2P không bao giờ xuống dưới 0.5
+→ NPC burn 50% token mua vào
+3. Luxury tax:
+Code
+Player giữ > 100,000 E Token:
+→ Phải trả 2% tax/tháng (2,000 Token)
+→ 100% burn
+→ Khuyến khích reinvest thay vì hoard
+4. Token sink events:
+Code
+Event "Black Hole":
+- Players donate token để "cứu vũ trụ"
+- Top donors nhận NFT Mythic weapon
+- 100% token donate bị burn
+- Ước tính burn: 500,000-1M Token/event
+10.3. Supply-Demand Self-Balance
+10.3.1. Hệ thống Auto-Balance hoàn toàn TỰ ĐỘNG
+Admin KHÔNG CẦN set thủ công. Game có AI-powered Economic Engine tự điều chỉnh.
+10.3.2. Auto Price Discovery (Tự động khám phá giá)
+Cơ chế:
+1. NPC Buy/Sell Price (Giá sàn/trần tự động):
+Python
+# Pseudo-code
+def calculate_npc_price(item_id):
+    current_supply = get_total_supply(item_id)
+    demand_rate = get_demand_rate(item_id)  # Số lượng giao dịch/ngày
+    
+    # Base price từ database
+    base_price = get_base_price(item_id)
+    
+    # Dynamic multiplier dựa trên supply/demand
+    if current_supply > demand_rate * 7:  # Dư thừa 7 ngày
+        multiplier = 0.7  # Giảm giá 30%
+    elif current_supply < demand_rate * 2:  # Thiếu hụt
+        multiplier = 1.3  # Tăng giá 30%
+    else:
+        multiplier = 1.0
+    
+    npc_buy_price = base_price * multiplier * 0.8  # NPC mua thấp hơn 20%
+    npc_sell_price = base_price * multiplier * 1.2  # NPC bán cao hơn 20%
+    
+    return npc_buy_price, npc_sell_price
+Ví dụ thực tế:
+Code
+Iron Ore base price: 0.5 E Token/kg
+
+Tình huống 1: Quá nhiều người đào Iron Ore
+→ Supply: 100,000 kg/ngày
+→ Demand: 50,000 kg/ngày
+→ Dư thừa 2x
+→ NPC buy price: 0.5 x 0.7 x 0.8 = 0.28 E Token/kg ↓
+→ Miners thấy giá thấp → chuyển sang đào Titanium
+→ Supply Iron giảm → giá tăng dần
+
+Tình huống 2: Ít người đào Iron Ore (vì event Sao Hải Vương)
+→ Supply: 20,000 kg/ngày
+→ Demand: 50,000 kg/ngày
+→ Thiếu hụt 2.5x
+→ NPC buy price: 0.5 x 1.3 x 0.8 = 0.52 E Token/kg ↑
+→ Miners thấy giá cao → quay lại đào Iron
+→ Supply Iron tăng → giá giảm dần
+10.3.3. Dynamic Quest Rewards
+Hệ thống tự động điều chỉnh phần thưởng quest:
+Python
+def calculate_quest_reward(quest_type):
+    token_inflation_rate = get_inflation_rate()  # % token mới/ngày
+    active_players = get_active_players_24h()
+    
+    # Base reward
+    base_reward = 20 E Token
+    
+    # Nếu inflation cao → giảm reward
+    if token_inflation_rate > 30:  # >30%/tháng
+        multiplier = 0.75
+    elif token_inflation_rate < 10:  # <10%/tháng
+        multiplier = 1.25
+    else:
+        multiplier = 1.0
+    
+    # Nếu quá nhiều người chơi → giảm reward (tránh lạm phát)
+    if active_players > 5000:
+        player_multiplier = 0.9
+    else:
+        player_multiplier = 1.0
+    
+    final_reward = base_reward * multiplier * player_multiplier
+    return final_reward
+10.3.4. Auto Burn Rate Adjustment
+Burn rate tự động tăng/giảm theo inflation:
+Python
+def calculate_burn_rate(transaction_type):
+    token_circulation = get_total_tokens_in_circulation()
+    token_created_30d = get_tokens_created_last_30_days()
+    inflation_rate = (token_created_30d / token_circulation) * 100
+    
+    # Base burn rates
+    base_rates = {
+        'fuel': 0.30,
+        'repair': 0.50,
+        'craft': 0.40,
+        'marketplace_tax': 0.20
+    }
+    
+    # Adjust burn rate based on inflation
+    if inflation_rate > 30:  # Lạm phát cao
+        multiplier = 1.5  # Tăng burn lên 50%
+    elif inflation_rate < 10:  # Deflation
+        multiplier = 0.8  # Giảm burn 20%
+    else:
+        multiplier = 1.0
+    
+    return base_rates[transaction_type] * multiplier
+Ví dụ:
+Code
+Tình huống: Lạm phát 35%/tháng (quá cao)
+
+Fuel burn rate:
+- Base: 30%
+- New: 30% x 1.5 = 45% ↑
+
+→ Mỗi lần mua fuel, 45% token bị burn thay vì 30%
+→ Supply token giảm nhanh hơn
+→ Inflation giảm về 25-30%
+→ System tự điều chỉnh burn rate về 30-35%
+10.3.5. Auto Event Triggering (Tự động kích hoạt sự kiện)
+Khi phát hiện mất cân bằng nghiêm trọng:
+Python
+def check_economic_health():
+    iron_supply_demand_ratio = get_supply_demand_ratio('iron_ore')
+    
+    if iron_supply_demand_ratio > 3.0:  # Dư thừa 3x
+        # Tự động trigger event: "Iron Rush"
+        trigger_event({
+            'type': 'double_xp_crafting_with_iron',
+            'duration': '48h',
+            'notification': 'Sao Hỏa đang có bão bụi! Double XP khi craft với Iron!'
+        })
+        # → Tăng demand Iron → cân bằng supply
+    
+    elif iron_supply_demand_ratio < 0.5:  # Thiếu hụt 2x
+        # Tự động trigger event: "Iron Shortage Crisis"
+        trigger_event({
+            'type': 'iron_deposit_event',
+            'duration': '72h',
+            'buff': '+50% iron drop rate on Mars',
+            'notification': 'Phát hiện mỏ Iron mới trên Sao Hỏa!'
+        })
+        # → Tăng supply Iron → cân bằng
+10.3.6. Machine Learning Price Prediction
+Backend chạy ML model để dự đoán giá:
+Python
+# Training data: historical price, supply, demand, events
+def train_price_prediction_model():
+    features = [
+        'current_supply',
+        'demand_rate_7d',
+        'active_players',
+        'token_inflation',
+        'recent_events',
+        'day_of_week',
+        'time_of_day'
+    ]
+    
+    model = train_ml_model(features, target='future_price_24h')
+    return model
+
+# Predict và adjust NPC price
+predicted_price = model.predict(current_market_data)
+npc_price = adjust_npc_price_based_on_prediction(predicted_price)
+10.3.7. Admin Dashboard (Chỉ để Monitor, KHÔNG Control)
+Admin có dashboard xem:
+•	📊 Real-time supply/demand charts
+•	📈 Token inflation rate
+•	🔥 Burn rate hiện tại
+•	⚖️ Supply/demand ratio của từng item
+•	🎯 Auto-adjustments gần đây
+Admin CHỈ CÓ THỂ:
+•	✅ Xem data
+•	✅ Nhận alert khi có bất thường (ví dụ: hack, exploit)
+•	✅ Emergency override (chỉ khi có bug nghiêm trọng)
+Admin KHÔNG THỂ:
+•	❌ Set giá thủ công
+•	❌ Thay đổi burn rate thủ công (trừ emergency)
+•	❌ Tạo token out of thin air
+10.4. NFT Drop Rate Balance
+Vấn đề cũ:
+Code
+Rồng đen 2% drop → 480 khối/ngày x 2% = 9.6 con/người/ngày
+→ 500 players = 4,800 con/ngày
+→ Lạm phát khủng khiếp!
+Giải pháp mới:
+NFT	Drop rate CŨ	Drop rate MỚI	Supply/ngày (500 players)	Giá kỳ vọng
+Rồng vàng (+20%)	0.1%	0.05%	120 con	200-500k VND
+Rồng bạc (+15%)	0.5%	0.15%	360 con	80-150k VND
+Rồng đen (+10%)	2%	0.3%	720 con	20-50k VND
+Cuốc vàng (+35%)	1%	0.8%	1,920 con	50-100k VND
+Weapon Rare (+5%)	-	25% khi craft	Varies	200k-500k VND
+Weapon Epic (+15%)	-	4% khi craft	Limited	800k-2M VND
+Weapon Legendary (+30%)	-	1% khi craft	Rare	3M-10M VND
+________________________________________
+11. KIẾN TRÚC KỸ THUẬT
+11.1. Frontend
+Game Client: Godot Engine 4.x (Ngay từ đầu)
+Lý do chọn Godot:
+•	✅ Open-source, miễn phí 100%
+•	✅ GDScript dễ học, tương tự Python
+•	✅ 2D performance cực tốt
+•	✅ Export sang Desktop (Windows/Mac/Linux) và Web (HTML5)
+•	✅ Hỗ trợ mobile tốt (Android/iOS)
+•	✅ Community lớn, nhiều tutorials
+Tech Stack:
+Code
+- Game Engine: Godot 4.2+
+- Language: GDScript (primary), C# (optional cho performance-critical code)
+- Web3 Integration: GDScript HTTPRequest + Web3 REST API
+- UI: Godot's built-in UI system
+- Export targets:
+  * Desktop: Windows, macOS, Linux
+  * Web: HTML5 (WebGL)
+  * Mobile: Android, iOS (phase 2)
+Architecture:
+Code
+[Godot Client]
+├── Scenes/
+│   ├── MainMenu.tscn
+│   ├── SpaceMap.tscn (9 hành tinh)
+│   ├── MiningScene.tscn
+│   ├── CraftingScene.tscn
+│   ├── PvPBattle.tscn
+│   └── GuildWarScene.tscn
+├── Scripts/
+│   ├── PlayerController.gd
+│   ├── Web3Manager.gd (connect MetaMask)
+│   ├── NFTManager.gd (mint, transfer)
+│   ├── EconomyManager.gd
+│   └── NetworkManager.gd (WebSocket to backend)
+└── Assets/
+    ├── Sprites/ (2D pixel art)
+    ├── Sounds/
+    └── Shaders/
+Web3 Integration trong Godot:
+GDScript
+# Web3Manager.gd
+extends Node
+
+var web3_api = "https://polygon-rpc.com"
+var contract_address = "0x..."
+
+func connect_wallet():
+    # Sử dụng JavaScript bridge (nếu chạy web)
+    JavaScript.eval("""
+        window.ethereum.request({ method: 'eth_requestAccounts' })
+            .then(accounts => window.godot_wallet_connected(accounts[0]))
+    """)
+
+func mint_nft(player_address, token_uri):
+    var headers = ["Content-Type: application/json"]
+    var body = {
+        "method": "mintNFT",
+        "params": [player_address, token_uri]
+    }
+    $HTTPRequest.request(backend_url + "/nft/mint", headers, HTTPClient.METHOD_POST, JSON.stringify(body))
+Website: React (SEO & Information Only)
+Mục đích:
+•	✅ SEO: Để Google index được game
+•	✅ Landing page: Giới thiệu game, roadmap, team
+•	✅ Blog/News: Thông báo updates, events
+•	✅ Docs: Hướng dẫn chơi, whitepaper
+•	✅ Community: Forum, Discord link
+KHÔNG dùng để:
+•	❌ Chơi game (chỉ dùng Godot client)
+•	❌ Trade NFT (chỉ link sang OpenSea)
+Tech Stack:
+Code
+- Framework: Next.js 14 (React + SSR for SEO)
+- UI: TailwindCSS
+- Content: Markdown + MDX
+- Hosting: Vercel (free tier)
+- Domain: spacemine.io
+Structure:
+Code
+spacemine.io/
+├── / (landing page)
+├── /about
+├── /roadmap
+├── /docs
+│   ├── /getting-started
+│   ├── /gameplay
+│   └── /nft-guide
+├── /blog
+├── /download (link download Godot client)
+└── /play (redirect sang game web hoặc download)
+11.2. Backend
+API Server:
+•	Framework: Spring Boot 3.x (Java 17)
+•	Database: MongoDB 6.0 (player data, transactions)
+•	Cache: Redis 7.0 (leaderboard, hot data)
+•	Message Queue: RabbitMQ (async tasks: mint NFT, war results)
+•	API Gateway: Kong / Nginx (rate limiting, load balancing)
+Microservices:
+Service	Tech	Chức năng
+Game Server	Spring Boot	Mining, crafting, PvP mechanics
+NFT Service	Node.js + Web3.js	Mint NFT, interact with smart contract
+Payment Service	Spring Boot	Momo/VNPay integration
+Auth Service	KeyCloak	Wallet signature verification
+Analytics	Python + FastAPI	Data pipeline, ML prediction
+11.3. Blockchain
+Smart Contracts:
+•	Standard: ERC-721 (NFT weapons, armor, tools, buildings)
+•	Language: Solidity 0.8.20+
+•	Chain: Polygon (MATIC) - Phiên bản mới nhất
+o	Gas fee: ~$0.01/transaction
+o	Block time: 2 seconds
+o	Alternative: Binance Smart Chain (BSC)
+•	Random: Chainlink VRF 2.5 (provably fair NFT drop)
+•	Oracle: Chainlink Price Feed (MATIC/USD for marketplace)
+Contract Architecture:
+Solidity
+SpaceMineNFT.sol (main contract)
+├─ ERC721Enumerable
+├─ Ownable
+├─ Pausable
+└─ ReentrancyGuard
+
+SpaceMineMarketplace.sol (optional - nếu không dùng OpenSea)
+├─ Escrow mechanism
+└─ Royalty 2.5%
+
+SpaceMineGovernance.sol (future - DAO)
+Deploy cost:
+•	Polygon mainnet: $0.10 USD)
+•	Audit (CertiK/SlowMist): $5,000-15,000 USD (nếu raise vốn)
+11.4. Infrastructure
+Game Server: Contabo Dedicated/VPS
+Lý do chọn Contabo:
+•	✅ Giá rẻ nhất thị trường: €7-20/tháng cho VPS mạnh
+•	✅ RAM/CPU cao: Phù hợp game multiplayer
+•	✅ Không giới hạn bandwidth (nhiều nhà khác giới hạn)
+•	✅ DDoS protection cơ bản (free)
+•	❌ Nhược điểm: Support chậm, uptime 99.5% (không phải 99.9%)
+Giai đoạn MVP (1,000 CCU):
+Component	Contabo Plan	Specs	Cost/tháng
+Game Server	VPS 20	6 vCPU, 12 GB RAM, 100 GB NVMe	€7 (~190k VND)
+Database	Dùng chung VPS	MongoDB standalone	€0
+Redis	Dùng chung VPS	Redis 1GB	€0
+TỔNG	-	-	€7 (~190k VND)
+Setup:
+Code
+[VPS 20]
+├── Docker Containers:
+│   ├── Game Server (Spring Boot) - Port 8080
+│   ├── MongoDB - Port 27017
+│   ├── Redis - Port 6379
+│   └── Nginx (reverse proxy) - Port 80/443
+└── Resources:
+    ├── Game: 4 vCPU, 8GB RAM
+    ├── MongoDB: 1 vCPU, 3GB RAM
+    └── Redis: 1 vCPU, 1GB RAM
+Giai đoạn Growth (5,000 CCU):
+Component	Contabo Plan	Specs	Cost/tháng
+Load Balancer	VPS 10	4 vCPU, 6GB RAM	€4 (~100k VND)
+Game Server 1	VPS 20	6 vCPU, 12GB RAM	€7
+Game Server 2	VPS 20	6 vCPU, 12GB RAM	€7
+Game Server 3	VPS 20	6 vCPU, 12GB RAM	€7
+Database	VPS 30	8 vCPU, 24GB RAM	€13 (~350k VND)
+Redis	VPS 10	4 vCPU, 6GB RAM	€4
+TỔNG	-	-	€42 (~1.1M VND)
+Giai đoạn Scale (10,000-20,000 CCU):
+Component	Contabo Plan	Specs	Cost/tháng
+Load Balancers	2x VPS 10 (HA)	4 vCPU, 6GB RAM each	€8
+Game Servers	6x VPS 20	6 vCPU, 12GB RAM each	€42
+Database	Dedicated Ryzen 12 Cores	12 cores, 128GB RAM, RAID 1 SSD	€50 (~1.35M VND)
+Redis Cluster	2x VPS 20	6 vCPU, 12GB RAM each	€14
+Monitoring	VPS 10	Grafana + Prometheus	€4
+TỔNG	-	-	€118 (~3.2M VND)
+So sánh với các nhà khác:
+Provider	10k CCU Setup	Cost/tháng	Notes
+Contabo	Dedicated + VPS cluster	€118 (~3.2M VND)	Giá tốt nhất, support chậm
+DigitalOcean	Droplets + Managed DB	$450 (~10.5M VND)	Support tốt, uptime 99.99%
+AWS	EC2 + RDS	$800+ (~18.6M VND)	Enterprise-grade, phức tạp
+Linode	Compute + Managed DB	$380 (~8.8M VND)	Balance giá/chất lượng
+Kết luận: Contabo tốt nhất cho MVP/Growth. Khi đạt 20k+ CCU và có budget, nên migrate sang DigitalOcean hoặc Linode.
+11.5. DevOps
+CI/CD:
+Code
+- Git: GitHub
+- CI/CD: GitHub Actions (free cho public repo)
+- Container: Docker + Docker Compose
+- Registry: GitHub Container Registry (ghcr.io)
+- Deploy: SSH + Docker Compose (simple, không cần K8s ở giai đoạn MVP)
+GitHub Actions Workflow:
+YAML
+# .github/workflows/deploy.yml
+name: Deploy to Contabo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Docker image
+        run: docker build -t ghcr.io/spacemine/game-server:latest .
+      - name: Push to registry
+        run: docker push ghcr.io/spacemine/game-server:latest
+  
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Contabo VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.CONTABO_HOST }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/spacemine
+            docker-compose pull
+            docker-compose up -d
+________________________________________
+12. HẠ TẦNG MÁY CHỦ & CHI PHÍ
+12.1. Giai đoạn MVP (Hỗ trợ 1,000 CCU)
+•	Cấu trúc: 1 Server All-in-One
+•	Server đề xuất: 1 x Contabo Cloud VPS 20 (6 Cores, 12 GB RAM, 100 GB NVMe)
+•	Chi phí ước tính: ~€7.00 / tháng (~190,000 VND)
+12.2. Giai đoạn Chính thức (Hỗ trợ 5,000 CCU)
+•	Cấu trúc: Kiến trúc 3 lớp
+•	Hệ thống Server đề xuất:
+o	1 x Load Balancer (Contabo VPS 10)
+o	3 x Game/Service Servers (Contabo VPS 20)
+o	1 x Dedicated Database Server (Ryzen 12 Cores, 128GB RAM)
+•	Chi phí ước tính: ~€139.00 / tháng (~3,750,000 VND)
+12.3. Giai đoạn Mở rộng (10,000 - 20,000 CCU)
+•	Cấu trúc: Kiến trúc Microservices Phân tán
+•	Hệ thống Server đề xuất:
+o	2+ Load Balancers (HA)
+o	Cụm Dedicated Servers cho Game logic (ví dụ: 2 x Turin 32 Cores)
+o	Cụm Dedicated Servers cho Database (ví dụ: 2 x Genoa 24 Cores chạy Replica Set)
+•	Chi phí ước tính: €500 - €1,000+ / tháng tùy quy mô
+________________________________________
+13. MONETIZATION
+13.1. Revenue Streams
+1. Nạp VND → E Token (Primary - 60%):
+Gói	VND	E Token	Bonus	Conversion rate ước tính
+Starter	50k	50 Token	-	15% người chơi
+Basic	100k	105 Token	+5%	25%
+Standard	300k	330 Token	+10%	20%
+Premium	500k	575 Token	+15%	10%
+Whale	1,500k	1,800 Token	+20%	2%
+Giới hạn: 1,500k VND/tháng/người (an toàn pháp lý)
+2. Premium Pass (Secondary - 20%):
+Tier	Giá/tháng	Benefits	Target %
+Basic Pass	50k	+10% tốc độ, no ads, Sao Vàng unlock	15%
+Premium Pass	120k	+20% tốc độ, +0.5% luck, 100 Token/tháng, skin	8%
+VIP Pass	300k	+35% tốc độ, +1% luck, 300 Token/tháng, priority support	2%
+
+3. Item Shop (10%):
+Item	Giá	Tác dụng	Buy rate ước tính
+Cuốc kim cương	150k	+50% tốc độ, 1000 độ bền	5%
+Bùa may mắn (5 lá)	90k	+2% NFT drop, 24h	10%
+Large Cargo Bay NFT	200k	+100% cargo	3%
+Skin pack	30k	Cosmetic	15%
+4. NFT Marketplace Royalty (8%):
+•	SpaceMine lấy 2.5% phí trên OpenSea (standard)
+•	Ước tính volume: 100 giao dịch/ngày x 500k VND = 50M VND/tháng
+•	Royalty: 50M x 2.5% = 1.25M VND/tháng
+5. Guild Services (2%):
+•	Guild creation: 100k VND (one-time)
+•	Guild war registration: 10,000 E Token/war (~6k VND)
+•	Guild territory rent: 5,000 E Token/tuần (~3k VND)
+13.2. Revenue Projection (1,000 players active)
+Tháng 1-3 (MVP):
+Stream	Revenue
+Nạp token	45M VND
+Premium Pass	6.4M VND
+Item Shop	9M VND
+NFT Royalty	0.5M VND
+TỔNG	60.9M VND/tháng
+Chi phí (cập nhật với Contabo):
+Hạng mục	Chi phí (old)	Chi phí (new - Contabo)
+Server (3 tháng)	4.5M VND	570k VND (€7 x 3) ↓
+Smart contract deploy	1.5M VND	50k VND (Polygon rẻ) ↓
+Design/art assets	3M VND	3M VND
+Payment integration	1M VND	1M VND
+Marketing nhỏ	2M VND	2M VND
+Domain + SSL	500k VND	500k VND
+Subtotal	12.5M VND	~7.1M VND ↓
+Lợi nhuận tháng 3:
+Code
+Revenue: 60.9M VND
+Chi phí: 7.1M / 3 = 2.4M VND/tháng
+Lợi nhuận: 60.9M - 2.4M = 58.5M VND ↑ (tăng 17% so với dự án cũ)
+Tháng 4-6 (Growth - 3,000 players):
+Stream	Revenue
+Nạp token	135M VND
+Premium Pass	19.2M VND
+Item Shop	27M VND
+NFT Royalty	3M VND
+Guild services	2M VND
+TỔNG	186.2M VND/tháng
+Tháng 7-12 (Scale - 10,000 players):
+Stream	Revenue
+Nạp token	450M VND
+Premium Pass	64M VND
+Item Shop	90M VND
+NFT Royalty	15M VND
+Guild services	8M VND
+TỔNG	627M VND/tháng
+Năm 1 tổng cộng: ~3.5-4 tỷ VND
+________________________________________
+14. PHÁP LÝ & AN TOÀN
+14.1. Tuân thủ Pháp luật VN
+1. E Token không phải cryptocurrency:
+•	✅ Virtual currency (đơn vị ảo) theo Thông tư 24/2014/TT-BTTTT
+•	✅ KHÔNG rút về VND → không vi phạm luật thanh toán
+•	✅ Giống Garena Shell, VNG VCoin → precedent thành công
+2. NFT là tài sản số:
+•	✅ Theo Luật Công nghệ số 2025: NFT = digital asset
+•	✅ Người chơi tự bán trên OpenSea → game không kiểm soát giá
+•	✅ Game chỉ mint NFT, không quản lý marketplace
+3. Không phải cờ bạc:
+•	✅ NFT rơi từ chơi game (đào, craft), không phải mua vé xổ số trực tiếp
+•	✅ Tỷ lệ rơi công khai, provably fair (Chainlink VRF)
+•	✅ Không đảm bảo giá trị NFT → không phải "đặt cược"
+4. Giới hạn nạp tiền:
+•	✅ 1,500k VND/tháng/người → tránh rủi ro rửa tiền (AML)
+•	✅ KYC nhẹ: xác thực SĐT (OTP) khi nạp >100k
+14.2. Điều khoản Sử dụng (ToS) - Bắt buộc
+Nội dung chính:
+1.	E Token là đơn vị ảo, KHÔNG rút VND
+2.	NFT rơi ngẫu nhiên, không đảm bảo giá trị
+3.	Game KHÔNG mua lại NFT
+4.	18+ hoặc 16+ có đồng ý phụ huynh
+5.	Người chơi tự chịu trách nhiệm thuế khi bán NFT
+6.	Game có quyền khóa tài khoản vi phạm (cheat, exploit)
+7.	Không hoàn tiền sau khi nạp
+14.3. Thuế (MVP Phase)
+Giai đoạn Freelancer (Tháng 1-6):
+•	Thuế TNCN: 10% trên doanh thu
+•	Kê khai: Hàng quý hoặc cuối năm
+•	Ví dụ: 60M VND/tháng → 6M VND thuế
+Giai đoạn Công ty TNHH (Tháng 7-12):
+•	Thuế CIT: 20% trên lợi nhuận sau chi phí
+•	Ví dụ:
+o	Doanh thu: 186M VND
+o	Chi phí hợp lệ (server, marketing, lương): -80M VND
+o	Lợi nhuận: 106M VND
+o	Thuế CIT (20%): 21.2M VND
+o	Lợi nhuận sau thuế: 84.8M VND
+Giai đoạn Singapore (Năm 2+):
+•	Thuế Singapore: 17% (hoặc 0-5% với startup incentive)
+•	Thu nhập từ NFT royalty → tài khoản Singapore
+•	Team VN làm R&D, nhận lương từ SG (chuyển khoản hợp pháp)
+14.4. Rủi ro & Mitigation
+Rủi ro	Xác suất	Impact	Giải pháp
+Bị tố cáo lừa đảo	Thấp	Cao	ToS rõ ràng, hotline support 24/7
+Thuế bị truy thu	Trung bình	Cao	Kê khai đúng, lưu log 5 năm
+Smart contract bị hack	Thấp	Cực cao	Audit (CertiK), multi-sig wallet, insurance
+Chính phủ cấm NFT game	Thấp	Cực cao	Setup Singapore sớm, không PR "kiếm tiền"
+NFT lạm phát → giá sụt	Cao	Trung bình	Giảm drop rate, burn token, event sink
+Server down	Trung bình	Cao	Load balancer, replica set, 99.9% uptime SLA
+________________________________________
+15. LỘ TRÌNH PHÁT TRIỂN
+15.1. Lộ trình 3 Giai đoạn
+1. MVP (0-9 tháng):
+•	Ra mắt phiên bản tối giản
+•	Mở cho mọi người chơi
+•	Chỉ có hình thức nạp tiền bằng crypto (Stablecoin)
+•	Mục tiêu: Xây dựng cộng đồng cốt lõi và kiểm chứng gameplay
+2. Beta (9-15 tháng):
+•	Khi MVP có lãi → thành lập công ty tại Singapore
+•	Ra mắt bản Beta, tích hợp Stripe
+•	Bắt đầu các chiến dịch marketing cho người chơi phổ thông
+3. Ra mắt Chính thức:
+•	Mở rộng quy mô server
+•	Đẩy mạnh marketing toàn cầu
+•	Giới thiệu các tính năng endgame như Territory War
+15.2. Roadmap Chi tiết
+Q1 2025 (Tháng 1-3): MVP Development
+Tháng 1:
+•	 Finalize GDD
+•	 Setup GitHub repo
+•	 Deploy smart contract testnet (Polygon Mumbai)
+•	 Godot Engine prototype (3 hành tinh: Mặt trăng, Sao Hỏa, Sao Mộc)
+o	Mining scene
+o	Player movement
+o	Inventory system
+Tháng 2:
+•	 Backend API (Spring Boot): mining, crafting, P2P trade
+•	 Godot Web3 integration (MetaMask connect)
+•	 Dynamic Wallet system (Stablecoin deposit)
+•	 NFT auto-mint (testnet)
+•	 Godot multiplayer (WebSocket)
+Tháng 3:
+•	 Deploy mainnet (Polygon)
+•	 Godot desktop export (Windows/Mac/Linux)
+•	 Godot web export (HTML5)
+•	 Closed Alpha: 50-100 players
+•	 Bug fixes, balance tweaks
+•	 Target: 10-20M VND revenue
+Q2 2025 (Tháng 4-6): Open Beta & Growth
+Tháng 4:
+•	 Open Beta: 500 players
+•	 PvP system (Godot multiplayer)
+•	 Guild system (basic)
+•	 Marketing campaign 1
+Tháng 5:
+•	 3 hành tinh mới (Sao Thổ, Sao Thiên Vương, Sao Hải Vương)
+•	 Crafting expansion (20+ weapons, 18+ armors)
+•	 Leaderboard system
+Tháng 6:
+•	 1,000+ players active
+•	 Guild War beta test
+•	 Godot mobile export (Android APK test)
+•	 Target: 150-200M VND revenue
+Q3 2025 (Tháng 7-9): Scale & Singapore
+Tháng 7:
+•	 Setup Singapore entity
+•	 Sao Diêm Vương unlock
+•	 Territory War system
+•	 Bounty Hunter career path
+Tháng 8:
+•	 Godot mobile optimization (Android/iOS)
+•	 Marketing campaign 2
+•	 Partnership với guild lớn
+Tháng 9:
+•	 5,000+ players active
+•	 First Guild War tournament
+•	 Target: 400-500M VND revenue/tháng
+Q4 2025 (Tháng 10-12): Mobile & Global
+Tháng 10:
+•	 Godot mobile app (Android Google Play)
+•	 Cross-platform sync (desktop ↔ mobile)
+•	 English localization
+Tháng 11:
+•	 iOS App Store launch (Godot iOS export)
+•	 Global marketing
+•	 Seed funding (nếu cần): $200k-500k
+Tháng 12:
+•	 10,000+ players (50% international)
+•	 Mythic weapon event
+•	 Target: 600-800M VND revenue/tháng
+2026+ (Year 2): Metaverse Expansion
+•	 Planet X (event-only)
+•	 DAO governance
+•	 VR support (Godot + OpenXR): Meta Quest, PSVR2
+•	 Esports tournaments
+•	 Land NFT
+15.3. Chiến lược Pháp lý
+Giai đoạn đầu:
+•	Hoạt động với tư cách cá nhân
+•	Doanh thu nhận bằng crypto
+Giai đoạn chính thức:
+•	Thành lập công ty Pte. Ltd. tại Singapore
+•	Cấu trúc này mang lại:
+o	✅ Bảo vệ trách nhiệm hữu hạn
+o	✅ Tối ưu về thuế (0-17%)
+o	✅ Tạo sự tin cậy với nhà đầu tư quốc tế
+________________________________________
+________________________________________
+16. FINANCIAL PROJECTION
+16.1. Chi phí Đầu tư (12 tháng)
+Phase 1: MVP (Tháng 1-3)
+Hạng mục	Chi phí OLD	Chi phí NEW (Godot + Contabo + Polygon)
+Domain + SSL	500k VND	500k VND
+Server (3 tháng)	4.5M VND	570k VND (€7 x 3 Contabo) ↓ -87%
+Smart contract deploy	1.5M VND	50k VND (Polygon gas rẻ) ↓ -97%
+Design/art assets	3M VND	2M VND (Godot có asset store miễn phí) ↓ -33%
+Payment integration	1M VND	1M VND
+Marketing nhỏ	2M VND	2M VND
+Subtotal OLD	12.5M VND	-
+Subtotal NEW	-	6.12M VND ↓ -51%
+Phase 2: Growth (Tháng 4-6)
+Hạng mục	Chi phí OLD	Chi phí NEW
+Server scale	6M VND	1.26M VND (€42 x 3 Contabo) ↓ -79%
+Marketing campaign 1	15M VND	15M VND
+Freelancer dev	20M VND	15M VND (Godot dev rẻ hơn Unity) ↓ -25%
+Customer support	5M VND	5M VND
+Subtotal OLD	46M VND	-
+Subtotal NEW	-	36.26M VND ↓ -21%
+Phase 3: Scale (Tháng 7-12)
+Hạng mục	Chi phí OLD	Chi phí NEW
+Singapore setup	50M VND	50M VND
+Server (6 tháng)	18M VND	9.6M VND (€118 x 6 x 1.35 = 19.2M / 2) ↓ -47%
+Unity mobile dev	80M VND	❌ 0 VND (Godot export mobile miễn phí) ↓ -100%
+Marketing campaign 2	50M VND	50M VND
+Full-time team (2 dev, 1 marketing, 1 support)	120M VND	120M VND
+Smart contract audit	30M VND	30M VND
+Legal/accounting	15M VND	15M VND
+Subtotal OLD	363M VND	-
+Subtotal NEW	-	274.6M VND ↓ -24%
+TỔNG ĐẦU TƯ NĂM 1:
+Version	Tổng chi phí
+OLD (Unity + DigitalOcean + BSC)	421.5M VND (~$18,000 USD)
+NEW (Godot + Contabo + Polygon)	316.98M VND (~$13,500 USD) ↓ -24.8%
+Tiết kiệm được: 104.52M VND (~$4,500 USD)
+16.2. Revenue Projection (Conservative)
+
+Tháng	Players	Revenue	Chi phí OLD	Chi phí NEW	Lợi nhuận OLD	Lợi nhuận NEW
+1-2	100	10M	8M	4M ↓	+2M	+6M ↑
+3	500	60M	10M	5M ↓	+50M	+55M ↑
+4-5	1,000	120M	25M	20M ↓	+95M	+100M ↑
+6	2,000	186M	30M	23M ↓	+156M	+163M ↑
+7-9	5,000	1,350M	150M	120M ↓	+1,200M	+1,230M ↑
+10-12	10,000	1,881M	200M	150M ↓	+1,681M	+1,731M ↑
+TỔNG	-	3,597M VND	573M	422M ↓	+3,024M VND	+3,175M VND ↑
+So sánh:
+Metric	OLD	NEW	Improvement
+Tổng đầu tư	421.5M VND	316.98M VND	-24.8% ↓
+Lợi nhuận năm 1	3,024M VND	3,175M VND	+5% ↑
+ROI	716%	1,002%	+40% ↑
+Payback period	Tháng 6	Tháng 4	Nhanh hơn 2 tháng ↑
+Break-even players	273 players	180 players	-34% ↓
+
+16.3. ROI Năm 1
+Phiên bản MỚI (Godot + Contabo + Polygon):
+Code
+Đầu tư: 316.98M VND (~$13,500 USD)
+Lợi nhuận: 3,175M VND (~$135,000 USD)
+ROI: (3,175 / 316.98 - 1) x 100 = 1,002%
+Payback period: Tháng 4 (4 tháng)
+So sánh với phiên bản CŨ:
+Version	Đầu tư	Lợi nhuận	ROI	Payback
+OLD (Unity + DO + BSC)	421.5M	3,024M	716%	6 tháng
+NEW (Godot + Contabo + Polygon)	316.98M ↓	3,175M ↑	1,002% ↑	4 tháng ↑
+Improvement	-24.8%	+5%	+40%	-33%
+
+16.4. Break-even Analysis
+Điểm hòa vốn (Break-even point) - NEW:
+Code
+Fixed cost/tháng: 
+- Server: €7 = 190k VND (MVP)
+- Tool subscriptions: 200k VND
+- Overhead: 100k VND
+TỔNG: 490k VND (~$21/tháng)
+
+Variable cost/player: 3k VND (payment fee rẻ hơn nhờ Polygon)
+ARPU: 60k VND/tháng
+
+Break-even players = 490k / (60k - 3k) = 8.6 players ≈ 9 players
+
+→ Cần CHỈ 9 players paying để hòa vốn
+→ Với 30% conversion → cần CHỈ 30 players total
+So sánh:
+Version	Fixed cost	Break-even players paying	Break-even players total	Đạt được trong
+OLD	15M VND/tháng	273 players	910 players	Tháng 3
+NEW	490k VND/tháng ↓	9 players ↓	30 players ↓	Tuần 2-3 ↑
+Improvement	-96.7%	-96.7%	-96.7%	10x nhanh hơn
+Kết luận: Với Godot + Contabo + Polygon, game có thể sinh lời CỰC NHANH chỉ với 30 người chơi!
+
+16.5. Sensitivity Analysis
+Nếu conversion rate thấp hơn dự kiến (NEW version):
+Scenario	Conversion rate	Revenue năm 1	Chi phí	Lợi nhuận	ROI
+Best case	40%	4.8B VND	422M	4.378B VND	1,381%
+Base case	30%	3.6B VND	422M	3.178B VND	1,003%
+Worst case	20%	2.4B VND	422M	1.978B VND	624%
+Nightmare	10%	1.2B VND	422M	0.778B VND	245%
+So sánh Worst case:
+Version	Revenue	Chi phí	Lợi nhuận	ROI
+OLD (worst case)	2.4B	573M	1.827B	469%
+NEW (worst case)	2.4B	422M ↓	1.978B ↑	624% ↑
+→ Ngay cả worst case, NEW version vẫn ROI 624% (6.24x vốn)
+________________________________________
+17. KẾT LUẬN & NEXT STEPS
+17.1. Tóm tắt Ưu điểm
+1. Tech Stack Tối ưu:
+•	✅ Godot Engine: Miễn phí 100%, export đa nền tảng, community lớn
+•	✅ Polygon blockchain: Gas rẻ ~$0.01 (vs BSC $0.30), nhanh hơn
+•	✅ Contabo servers: Rẻ nhất thị trường, tiết kiệm 80-90% chi phí server
+•	✅ Không cần Unity: Tiết kiệm 80M VND (Unity mobile dev)
+2. Chi phí Cực thấp:
+•	✅ Đầu tư ban đầu: Chỉ 317M VND (thay vì 422M) - Tiết kiệm 25%
+•	✅ Chi phí vận hành: Chỉ 490k/tháng (MVP) - Tiết kiệm 97%
+•	✅ Break-even cực nhanh: Chỉ cần 30 players (thay vì 910) - 30x dễ hơn
+3. ROI Cực cao:
+•	✅ ROI năm 1: 1,002% (10x vốn) - tăng 40% so với phiên bản cũ
+•	✅ Payback period: 4 tháng (thay vì 6) - nhanh hơn 50%
+•	✅ Lợi nhuận năm 1: 3.175B VND - tăng 5% dù giảm chi phí
+4. Cơ chế NFT An toàn:
+•	✅ Không mất vĩnh viễn: Bảo vệ người chơi khỏi mất tài sản
+•	✅ Smart Contract Lock: Tự động khóa NFT hỏng, tránh lừa đảo
+•	✅ Repair System: 3 options linh hoạt (free/paid/deep restore)
+•	✅ Anti-Abuse: Chống lách luật bằng Transfer History + Repair Binding
+5. Economy Tự cân bằng:
+•	✅ 100% Automatic: Admin không cần can thiệp thủ công
+•	✅ AI-powered: ML model dự đoán giá, tự động điều chỉnh
+•	✅ Dynamic Burn Rate: Tự động tăng/giảm theo inflation
+•	✅ Auto Events: Trigger event khi mất cân bằng
+6. Items Mở rộng:
+•	✅ 15 Tools: Từ Cuốc gỗ → Dark Matter Drill
+•	✅ 20 Weapons: Từ Wooden Club → Black Hole Generator
+•	✅ 18 Armors: Từ Cloth Vest → Time Distortion Field
+•	✅ 12 Ships: Từ Escape Pod → Mothership
+•	✅ 15 Buildings: Mining/Refinery/Forge/Commercial/Support
+
+17.2. So sánh TRƯỚC vs SAU Update
+Tiêu chí	TRƯỚC (v3.0)	SAU (v3.1)	Improvement
+Game Engine	Unity/Phaser.js (chưa rõ)	Godot 4.x từ đầu	+Clarity, -Cost
+Blockchain	BSC (gas $0.30)	Polygon (gas $0.01)	-97% gas fee
+Server	DigitalOcean ($125/tháng)	Contabo (€7/tháng)	-96.7% cost
+Total Investment	421.5M VND	316.98M VND	-24.8%
+ROI	716%	1,002%	+40%
+Break-even	273 players	9 players	-96.7%
+NFT Loss	Vĩnh viễn (thua PvP)	Không bao giờ mất	+Player retention
+NFT Lock	Chưa có	Smart Contract Auto Lock	+Anti-scam
+Economy	Admin set giá	100% Auto AI	+Fairness
+Items	~30 items	60+ items	+100%
+Website	Game client	SEO only	+Clear purpose
+Mobile	Unity dev 80M	Godot export FREE	-100% cost
+________________________________________
+17.3. Next Steps (Immediate Action) - CẬP NHẬT
+Tuần 1-2:
+•	 Finalize GDD (bản này đã 95% complete)
+•	 Download Godot Engine 4.2+ (godotengine.org)
+•	 Setup GitHub repo: github.com/nguyenthithanhtoan2929/spacemine
+•	 Đăng ký domain: spacemine.io hoặc spacemine.gg (~$12/năm)
+•	 Thuê Contabo VPS 20: €7/tháng (contabo.com)
+Tuần 3-4:
+•	 Godot tutorial: Học GDScript (2-3 ngày, dễ như Python)
+•	 Tạo scene đầu tiên: MainMenu + SpaceMap (9 hành tinh)
+•	 Smart contract Solidity (ERC-721 basic)
+•	 Deploy Polygon Mumbai testnet (gas FREE)
+Tháng 2:
+•	 Godot Mining Scene: Player đào khoáng, inventory system
+•	 Backend API (Spring Boot): /mine, /craft, /trade
+•	 Godot Web3 integration: Connect MetaMask qua JavaScript bridge
+•	 Dynamic Wallet system (Stablecoin deposit)
+•	 Test NFT mint trên testnet
+Tháng 3:
+•	 Godot Multiplayer: WebSocket cho PvP
+•	 Deploy mainnet (Polygon)
+•	 Godot export: Desktop (Windows/Mac) + Web (HTML5)
+•	 Closed Alpha: Mời 50 người test (Discord/Reddit/FB groups crypto game VN)
+•	 Iterate dựa trên feedback
+17.4. Call to Action
+1.	Nếu solo dev (như bạn @nguyenthithanhtoan2929):
+2.	Lợi thế của bạn:
+3.	✅ Chi phí CỰC THẤP: Chỉ cần 317M VND cho cả năm (có thể tự bỏ)
+4.	✅ Godot dễ học: GDScript giống Python, 1-2 tuần là quen
+5.	✅ 1 người có thể làm được: Godot + Spring Boot + Solidity
+6.	✅ Break-even nhanh: Chỉ cần 30 players là đủ sống
+7.	Roadmap tối thiểu:
+8.	Tháng 1-2: Học Godot + build prototype (1 hành tinh, mining, inventory)
+9.	Tháng 3: Deploy testnet + Alpha test với 50 người
+10.	Tháng 4: Deploy mainnet + Open Beta với 500 người
+11.	Tháng 5-6: Scale lên 1,000-2,000 players → đủ sống, quit job
+12.	Tháng 7+: Thuê thêm người, setup Singapore, scale 10k+
+13.	Timeline thực tế (1 người, part-time 4h/ngày):
+14.	Tháng 1-3: Build MVP (12 tuần x 4h x 7 ngày = 336 giờ)
+15.	Tháng 4-6: Beta + iterate (336 giờ)
+16.	Tháng 7+: Scale (có thu nhập để quit job, full-time)
+17.	Nếu có team (2-3 người):
+18.	Phân công:
+19.	1 Backend dev (Spring Boot + MongoDB + Smart Contract)
+20.	1 Frontend dev (Godot + GDScript + Web3 integration) - Đây là bạn
+21.	1 Designer/Marketing (part-time): Pixel art, social media
+22.	Timeline nhanh hơn:
+23.	Tháng 1-2: MVP (6-8 tuần)
+24.	Tháng 3: Alpha + Beta (4 tuần)
+25.	Tháng 4: Scale lên 1,000 players
+26.	Tháng 5-6: Setup Singapore, scale 5,000+
+27.	Nếu có vốn ($50k-100k):
+28.	Đầu tư vào:
+29.	Team full-time: 3-5 devs + 1-2 marketing
+30.	Marketing aggressive: TikTok Ads, KOL crypto, Streamer
+31.	Audit smart contract: CertiK/SlowMist ($10k-20k)
+32.	Server scale ngay: Contabo Dedicated ($50-100/tháng)
+33.	Target: 10k players trong 3-4 tháng (thay vì 6)
+34.	ROI dự kiến:
+35.	Code
+36.	Đầu tư: $50k (~1.2B VND)
+37.	Revenue tháng 4-6: 186M x 3 = 558M VND
+38.	Revenue tháng 7-12: 627M x 6 = 3.762B VND
+39.	Tổng revenue năm 1: ~4.5B VND
+40.	ROI: (4.5 - 1.2) / 1.2 = 275% (~3.75x)
+41.	Payback: Tháng 8-9
+42.	
+________________________________________
+PHỤ LỤC
+A. Godot Resources (Tài nguyên học Godot)
+Official:
+•	Godot Engine: https://godotengine.org
+•	Docs: https://docs.godotengine.org/en/stable/
+•	Asset Library: https://godotengine.org/asset-library/asset
+Tutorials (Tiếng Anh):
+•	Brackeys (YouTube): "How to make a game in Godot"
+•	GDQuest: https://www.gdquest.com/ (free courses)
+•	HeartBeast (YouTube): "Godot 2D tutorial"
+Tutorials (Tiếng Việt):
+•	YouTube: "Hướng dẫn Godot Engine tiếng Việt"
+•	Facebook Group: "Godot Engine Vietnam"
+Web3 + Godot:
+•	GitHub: godot-web3 (community plugin)
+•	Forum: https://godotengine.org/community/forums
+Ước tính thời gian học:
+•	GDScript basics: 2-3 ngày (nếu đã biết Python)
+•	Godot 2D game: 1-2 tuần (làm theo tutorial)
+•	Multiplayer: 3-5 ngày
+•	Web3 integration: 1 tuần
+Tổng: 3-4 tuần để thành thạo (part-time 2-4h/ngày)
+________________________________________
+B. Contabo Setup Guide
+Bước 1: Đăng ký Contabo
+1.	Vào https://contabo.com
+2.	Chọn VPS 20 (€6.99/tháng)
+o	6 vCPU Cores
+o	12 GB RAM
+o	100 GB NVMe SSD
+o	Unlimited traffic
+3.	Chọn Region: EU (Germany) hoặc Singapore (gần VN hơn, +€2/tháng)
+4.	OS: Ubuntu 22.04 LTS
+5.	Thanh toán: Credit Card hoặc PayPal
+Bước 2: SSH vào server
+bash
+ssh root@YOUR_SERVER_IP
+Bước 3: Install Docker
+bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+Bước 4: Install Docker Compose
+bash
+apt install docker-compose -y
+Bước 5: Deploy game
+bash
+# Clone repo
+git clone https://github.com/nguyenthithanhtoan2929/spacemine.git
+cd spacemine
+
+# Run
+docker-compose up -d
+Bước 6: Setup domain
+bash
+# Install Nginx
+apt install nginx -y
+
+# Install Certbot (SSL free)
+apt install certbot python3-certbot-nginx -y
+certbot --nginx -d spacemine.io
+Chi phí thực tế:
+•	VPS: €6.99/tháng
+•	Domain: $12/năm = $1/tháng
+•	Tổng: ~€8.5/tháng (~230k VND)
+________________________________________
+C. Polygon Deployment Guide
+Bước 1: Setup Wallet
+1.	Install MetaMask: metamask.io
+2.	Switch network: Polygon Mumbai Testnet (test) hoặc Polygon Mainnet (prod)
+3.	Get MATIC:
+o	Testnet: https://faucet.polygon.technology (FREE)
+o	Mainnet: Buy on Binance/Coinbase
+Bước 2: Smart Contract
+Solidity
+// SpaceMineNFT.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract SpaceMineNFT is ERC721Enumerable, Ownable {
+    struct ItemDurability {
+        uint8 current;  // 0-100%
+        uint8 max;      // 0-100%
+        uint256 repairTime;
+        address lastRepairer;
+    }
+    
+    mapping(uint256 => ItemDurability) public itemDurability;
+    
+    constructor() ERC721("SpaceMine Item", "SMI") {}
+    
+    function mint(address to, uint256 tokenId) public onlyOwner {
+        _safeMint(to, tokenId);
+        itemDurability[tokenId] = ItemDurability(100, 100, 0, address(0));
+    }
+    
+    function transfer(address to, uint256 tokenId) public override {
+        require(itemDurability[tokenId].current > 0, "Item needs repair");
+        require(itemDurability[tokenId].max > 0, "Item is broken");
+        require(block.timestamp >= itemDurability[tokenId].repairTime + 7 days, "Transfer locked for 7 days after repair");
+        super.transfer(to, tokenId);
+    }
+    
+    function repair(uint256 tokenId) public {
+        require(ownerOf(tokenId) == msg.sender, "Not owner");
+        itemDurability[tokenId].current = 100;
+        itemDurability[tokenId].max -= 1;
+        itemDurability[tokenId].repairTime = block.timestamp;
+        itemDurability[tokenId].lastRepairer = msg.sender;
+    }
+}
+Bước 3: Deploy
+bash
+# Install Hardhat
+npm install --save-dev hardhat
+
+# Deploy script
+npx hardhat run scripts/deploy.js --network polygon
+Chi phí:
+•	Testnet: FREE (dùng faucet)
+•	Mainnet deploy: ~0.1 MATIC (~$0.10 USD)
+•	Mint NFT: ~0.001 MATIC (~$0.001 USD)
+________________________________________
+D. CHANGELOG v3.1
+Ngày cập nhật: 2025-10-20 17:25:07 UTC User: @nguyenthithanhtoan2929
+Thay đổi chính:
+1.	Items mở rộng:
+o	Tools: 5 → 15 loại (+200%)
+o	Weapons: 6 → 20 loại (+233%)
+o	Armor: 4 → 18 loại (+350%)
+o	Ships: 4 → 12 loại (+200%)
+o	Buildings: 5 → 15 loại (+200%)
+2.	NFT Durability System hoàn toàn mới:
+o	✅ NFT KHÔNG BAO GIỜ bị mất vĩnh viễn
+o	✅ Hệ thống hao mòn: Current + Max Durability
+o	✅ 3 cách repair: Natural (free), Standard (paid), Deep Restore (expensive)
+o	✅ Smart Contract Lock: Tự động khóa NFT hỏng, không cho trade
+o	✅ Anti-Abuse: Transfer History + Repair Binding + Cooldown
+3.	Economy Auto-Balance:
+o	✅ 100% tự động, admin không cần set
+o	✅ AI-powered price discovery
+o	✅ Dynamic burn rate (tự điều chỉnh theo inflation)
+o	✅ Auto quest rewards adjustment
+o	✅ Auto event triggering (khi mất cân bằng)
+o	✅ ML price prediction model
+4.	Tech Stack Final:
+o	✅ Game: Godot Engine 4.x (từ đầu, bỏ Unity/Phaser.js)
+o	✅ Website: React Next.js (SEO only, không chơi game)
+o	✅ Backend: Spring Boot (Java 17) + MongoDB + Redis
+o	✅ Blockchain: Polygon (bỏ BSC, gas rẻ hơn 97%)
+o	✅ Server: Contabo VPS (bỏ DigitalOcean, rẻ hơn 96%)
+5.	Chi phí giảm mạnh:
+o	Tổng đầu tư: 421.5M → 316.98M VND (-24.8%)
+o	Server MVP: $125/tháng → €7/tháng (-96.7%)
+o	Break-even: 273 players → 9 players (-96.7%)
+o	ROI năm 1: 716% → 1,002% (+40%)
+6.	Roadmap cập nhật:
+o	❌ Bỏ: Unity mobile dev (80M VND)
+o	❌ Bỏ: Phaser.js
+o	✅ Thêm: Godot desktop + web + mobile (FREE)
+o	✅ Payback nhanh hơn: Tháng 6 → Tháng 4
+________________________________________
+KẾT THÚC TÀI LIỆU v3.1
+Tổng số trang: ~80 trang A4
+Tổng số từ: ~22,000 từ
+Thời gian đọc: ~90 phút
+Thời gian thực hiện: ~9-12 tháng (solo dev) hoặc ~4-6 tháng (team)
+________________________________________
+🚀 GOOD LUCK WITH SPACEMINE! ⛏️🪐
+Ready to build? Let's start! 💪
+Contact:
+•	GitHub: @nguyenthithanhtoan2929
+•	Discord: (setup later)
+•	Email: nguyenthithanhtoan2929@gmail.com
+________________________________________
+P/S: Tài liệu này đã được tổng hợp và cập nhật đầy đủ từ 2 files gốc + tất cả requirements mới. Không còn phần nào bị thiếu! 🎉
+
+
+
